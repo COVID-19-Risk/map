@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159377200-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-159377200-1');
+    </script>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Risk map of COVID-19 - Spain</title>
+    <meta name="description" content="Risk map COVID-19 - Spain.">
+    <link rel="stylesheet" href="../../main_v4.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <nav>
+                <a href="#modelo">MODEL</a>
+                <a href="#resultados">RESULTS</a>
+                <a href="#FAQsection">FREQUENTLY ASKED QUESTIONS</a>
+                <a href="#autores">AUTHORS</a>
+                <a id="eng" href="../es/index.html">EN CASTELLANO</a>
+            </nav>
+        </header>
+
+    
+
+        <main>
+           <h1>Map of propagation risk of COVID-19 by local contact in Spain</h1>
+
+           <div class="message green">
+               <!--Given the lack of official data disclosure informing in a trustworthy and timely manner of the new detected cases and their locations, we regret to inform that we must temporarily discontinue the updates of this map as of March, 3, 2020. <br><br>
+               Our team will keep on working to be able to offer new analyses soon. <br>
+               <div class="firma">- The researchers</div>-->
+               After temporarily discontinuing the maintenance of this risk map because of the lack of official and reliable data of the detected cases in March, 3, 2020, we are able to announce that as of March, 10, 2020, we are in the position of offering new results. Please read <a href="#losdatos">this section</a> for more information. 
+            </div>
+
+            <!------------------ MOTIVATION ---------------------------------->
+
+            <br>
+            <hr class="barrita">
+            <br>
+            <h2>Motivation</h2>
+            <p>
+               The spread of COVID-19 is posing many challenges to our social and health systems. One of them is predicting and quantifying the emergence of new cases that follow local contagion at a national scale. By local contagion we refer to those cases of individuals that are infected with the virus but for which the source of infection is unknown, that is, the person affected has not reported any travel to affected areas or any direct contacts with other infected individuals. 
+            </p>
+
+            <p>
+                One of the major difficulties we are currently facing is the early detection of cases, which is essential for its confinement and medical treatment. A crucial feature of this virus is that it presents an asymptomatic phase, where the infected individual is infectious but presents mild or no symptoms. This period is considerably long, and can last up to 14 days according to the present reported data. The current lack of measures to detect infection cases in their early stages in addition to the existence of this asymptomatic phase influences to a large extent the spreading of the epidemics and the implementation of effective control measures.
+            </p>
+
+            <p>
+                In this website we show the results of the estimated epidemic risk in Spain, at a municipal level, as obtained by a model of epidemic spreading which takes into account the recurrent mobility patterns (commuting) among municipalities. This data has been provided by the <a target="_blank" href="https://www.ine.es/"> Instituto Nacional de Estadística (INE)</a> (National Institute of Statistics) of Spain.
+            </p>
+
+            <p>
+                Our model currently includes the epidemiological data reported up to the present moment for the virus responsible of the COVID-19 (now officially named SARS-CoV-2) and demographical and mobility data for each municipality in Spain. This model can also be directly applied to other countries and regions for which such mobility and demographics data is available.
+            </p>
+
+            <!------------------ RESULTS ---------------------------------->
+            <br>
+            <hr class="barrita" id="resultados">
+            <br>
+            <h2>Results</h2>
+
+            <p>
+                The risk map generated with our model produces an indicator for each municipality of the fraction of the population that is estimated to have contracted the infection of SARS-CoV-2 through local contact. Those areas shaded in gray correspond to areas for which there is no data available. 
+            </p>
+
+            <p class="stressed">
+                Given the high number of visits, the map might take a few seconds to load. 
+            </p>
+            
+            <!-- MAP -->
+            <iframe src="../../map/?lang=en" id="map" frameborder="0" allowfullscreen></iframe>
+
+            <p class="stressed">
+                The numerical data corresponding to the map can be downloaded <a href="../resources/Risk_Municipio_2020_03_14-18.xlsx" target="_blank">here in Excel format</a> and <a href="../resources/Risk_Municipio_2020_03_14-18.pdf" target="_blank">here in pdf format</a>.
+            </p><br>
+
+            <!------------------ MODEL ---------------------------------->
+            <br>
+            <hr class="barrita" id="modelo">
+            <br>
+            <h2>Model</h2>
+            <p>
+                The model we are using is a new version of a family of epidemiological models in discrete time, that has been specifically modified to represent the particular spreading dynamics of SARS-COV-2, the virus causing COVID-19.
+            </p>
+
+            <p>
+                The objective of the model is to estimate the risk for every municipality in Spain, taking into account the following factors: (I) The dynamics of the transmission of SARS-COV-2, and (II) the recurrent mobility flows in Spain, and (III) the demography of the Spanish population.
+            </p>
+
+            <p>
+                With respect to modeling the transmission of the virus, we use a compartmental model, meaning that we divide the population according to their infection status. These compartments are:
+                <ul>
+                    <li>Susceptible: an individual that has not been infected yet but is susceptible to infection.</li>
+                    <li>Exposed: an individual who is infected but not yet infectious, because he/she still is in an incubation phase.</li>
+                    <li>Asymptomatic (or displaying mild symptoms): an individual who is infected and infectious, but does not show clear symptoms of COVID-19.</li>
+                    <li>Infected: in our model, an infected individual is infectious and does show clear symptoms compatible with COVID-19, making its detection easier than those in the Asymptomatic compartment.</li>
+                    <li>Hospitalized: an infected individual that has been detected and that requires hospitalization. This individual is not considered to be infectious anymore as it is supposed to be confined inside the hospital.</li>
+                    <li>Recovered/removed: an individual who has been infected at a moment in time, but who in the current moment, is not infectious anymore. This could happen because the individual has recovered from the infection and developed immunity, or because the patient has died.</li>
+                </ul>
+            </p>
+           
+            <p>
+                The transitions among the previous compartments are regulated with the specific parameters of the model (transmission probability, recovery probability...etc), and have been derived from the scientific literature published up to the present moment. 
+            </p>
+                
+            <p>
+                Regarding mobility, we have used data made available by the Instituto Nacional de Estadística (INE, Spain), that record those mobility flows inside and among municipalities that are observed recurrently, because of habitual commuting to and from the workplace. This data set reports only those flows that involve more than 10 trips, and for municipalities larger than 100 inhabitants. We incorporate the commuting mobility in our model because we deem it fundamental to understand how the infection spreads through the territory. Our model can also be used to simulate certain mobility restrictions (either local or global), and calculate the resulting risk estimates that we would observe under such restrictions. 
+            </p>
+
+            <p>
+                With respect to the demography, we have considered essential to divide the population of the country in three compartments: young people (from 0 to 25 y.o.), adults (26-65) and elderly (>66). Very recent evidence reports that COVID-19 affects very differently each of these age compartments. In our model, the differences that we establish between the three groups are, essentially:
+                <ul>
+                    <li>Young people and elderly do not travel across the territory with the same probability as adults do.</li>
+                    <li>Young people have, with more probability than the other two compartments, infections where only an asymptomatic (or with mild symptoms) phase is observed, making these infections harder to detect.</li>
+                    <li>Elderly people go to the hospitalized compartment with a much higher probability than young people or adults.</li>
+                </ul>
+
+
+            </p>
+
+            <h4>Limitations</h4>
+            <p>
+                <ul>
+                    <li>The model does not predict the imported international cases (those individuals that have been infected outside the country and then traveled to Spain).</li>
+                    <li>The model is working with epidemiological parameters as reported up to the present moment in the medical and scientific literature, but can be changed upon new discoveries.</li>
+                    <li>The model assumes that the mobility data as reported by INE do not change. Our estimation would substantially differ if mobility restrictions were imposed.</li>
+                </ul>
+            </p>
+
+            <h4>Advantages</h4>
+            <p>
+                <ul>
+                    <li>The model allows altering the epidemiological parameters as soon as new epidemiological studies report them.</li>
+                    <li>The model allows to study the influence of the asymptomatic period and its associated infectivity.</li>
+                    <li>Taking into account the epidemiological factors and the mobility and demography data, we can estimate the map of risk of new cases, which allows us to anticipate the spreading of the virus through asymptomatic individuals.</li>
+                    <li>Massive restriction mobility (quarantine policies) can easily be introduced in the model, allowing us to obtain a new estimate of the risk under these new measures. This would allow policy makers and authorities to obtain an estimation of the efficacy of such measures.</li>
+                </ul>
+            </p>
+
+            <h4 id="losdatos" >The problem with the data</h4>
+            <p>
+                Our model can calculate, starting from a set of initial conditions (i.e. a certain number of detected cases and their exact location), an estimation of how would the epidemic evolve in Spain. In the first phase of the spreading of SARS-COV-2 in Spain, the majority of the reported cases were “imported”, that is, individuals that had traveled to other infected countries, got infected there and then traveled to Spain. These cases cannot be detected by our model because they are external to the transmission dynamics of the virus inside the country. For that reason, in a phase where the imported cases conform the majority of the detected positives in the country, it is crucial to have accurate, reliable data to be able to calculate our estimates. Given that it proved impossible to have access to such data, we decided to temporarily discontinue the updating of our risk map.
+            </p>
+
+            <p>
+                In the present moment, however, a great number of detected infection cases in Spain are already “native”, meaning that they have been originated inside the country, by local transmission. These kind of cases are well detected by our model, which, starting out from the initial conditions of the first phase of the epidemics (where the vast majority of the cases were imported), is able to make the system evolve and produce the infection risk estimate. For this reason we are in the position of offering new results through our risk map. 
+            </p>
+
+            <!------ FAQs ------------------------------------------------------------------>
+            <br>
+            <hr class="barrita" id="FAQsection">
+            <br>
+            <h2>Frequently Asked Questions</h2>  
+
+
+            <button class="accordion">
+                What does this map depict?
+            </button>
+            <div class="panel">
+                <p>
+                    In this map we plot, for each municipality in Spain, an indicator of the fraction of the population that we estimate might have been infected by COVID-19 by local contact.
+                </p>
+            </div>
+
+            <button class="accordion">
+                What is a mathematical model and what is its purpose?
+            </button>
+            <div class="panel">
+                <p>
+                    A mathematical model is a simplified abstraction of reality in the form of mathematical equations. The equations obtained can be used to understand what phenomena would we observe under certain conditions. The most common example of a mathematical model are meteorology models, used for weather forecasting.
+                </p>
+            </div>
+
+            <button class="accordion">
+                What are the assumptions in your model?
+            </button>
+            <div class="panel">
+                <p>
+                    Our model is a new version of a family of models already established in the scientific literature, called compartmental epidemiological models. In this particular model, which has been especially designed for the spreading of COVID-19, we assume that an individual might be in a susceptible state, in the exposed state (infected but not yet infectious), in an infectious asymptomatic state, in an infectious and symptomatic state, or in a recovered or removed state. The transitions between the previous compartments are regulated by the specific parameters for this disease. 
+                </p>
+            </div>
+
+            <button class="accordion">
+                Where did you get the parameters from?
+            </button>
+            <div class="panel">
+                <p>
+                    The parameters have been obtained from the most recent scientific literature about the epidemiological traits of this new virus causing the disease COVID-19 (now officially termed SARS-CoV-2). The parameters could be modified depending on the results of the ongoing research. 
+                </p>
+            </div>
+
+            <button class="accordion">
+                If someone lives or works in an area where the risk is 0.1%, does that mean that this individual has 1 chance in 1000 of contracting the disease?
+            </button>
+            <div class="panel">
+                <p>
+                    No. A risk indicator of a 0.1% in a municipality means that we estimate that 1 of every 1000 individuals of that municipality might be infected (either in a symptomatic or asymptomatic state). The probability of contracting the disease depends on more factors, like for instance, the number of contacts that one individual makes, the infectivity of the disease, etc. The risk of infection of each municipality that we plot on the map could be interpreted as the “potential health state with respect to COVID-19 of that municipality".
+                </p>
+            </div>
+
+            <button class="accordion">
+                Do you update the data of the model every time a new contagion case is detected?
+            </button>
+            <div class="panel">
+                <p>
+                    No. That is the process we followed during the first days of infection in Spain, because most of the detected cases were “imported”, and therefore they had to be introduced in the model by hand. At the present moment, the spreading of the epidemic is in another phase, where most of the infection cases are result of local contagion. These local infections are well captured by our model, meaning our model is able to reproduce them. We are now feeding our model with the initial conditions of the first phase of the epidemics (the number of reported cases in that phase), we let the model evolve and we plot the risk estimate prediction for the following days. 
+                </p>
+            </div>
+
+            <button class="accordion">
+                You used to offer only one risk map and now there is a prediction for several days. What has changed?
+            </button>
+            <div class="panel">
+                <p>
+                    The key is the fact that the epidemic is now in a different phase. At the very beginning, there were very few reported cases and most of them were imported (i.e. exogenous to our model). In such a scenario, the model was very sensitive to the initial conditions (the number and exact location of the identified contagions). For this reason, it was necessary to update the initial conditions as new cases were reported, and the forecast obtained was only valid at a very short term. Now that the epidemic has evolved into a second phase mostly characterized by local contagions, we can evaluate the model for more timesteps and obtain the risk estimate for several days. 
+                </p>
+            </div>
+ 
+            <button class="accordion">
+                What does recurrent mobility mean?
+            </button>
+            <div class="panel">
+                <p>
+                    We are using the mobility data from the Instituto Nacional de Estadística, which accounts for the mobility of the population who works in each municipality. This data reports, principally, the home-to-work mobility and viceversa, although they contain other mobility factors not necessarily work-related. 
+                </p>
+            </div>
+            
+            <button class="accordion">
+                Why are there patches that are shaded in grey?
+            </button>
+            <div class="panel">
+                <p>
+                    This means that there is no available mobility data for that municipality, most likely because its population falls below 100 inhabitants. 
+                </p>
+            </div>
+
+            <button class="accordion">
+                Why are there municipalities that have a risk of 0% when they are surrounded by other regions with risk of infection?
+            </button>
+            <div class="panel">
+                <p>
+                    The mobility data that is at our disposal only reports those flows of daily recurrent mobility that comprise more than 10 individuals. In the case of areas where there is a 0% risk reported even if they are surrounded by areas with positive risk, what happens is that the ingoing and outgoing flows to and from that region are not reported, and to all effects, it behaves like an isolated area. 
+                </p>
+            </div>
+
+            <script src="../../accordion.js"></script>
+
+            <br>
+            
+
+             <!------------------ AUTORES ---------------------------------->
+             <br>
+             <hr class="barrita" id="autores">
+             <br>
+             <h2 id="FAQsection">Authors</h2>   
+ 
+ 
+             <p class="stressed">Principal Investigators:</p>
+             <p>
+                 <a target="_blank" href="http://deim.urv.cat/alexandre.arenas">Alex Arenas</a> (Universitat Rovira i Virgili, Tarragona, Spain)<br>
+                 <a target="_blank" href="http://complex.unizar.es/~jesus/">Jesús Gómez-Gardeñes</a> (Universidad de Zaragoza, Zaragoza, Spain)<br>
+             </p>
+             <p class="stressed">Participating researchers:</p>
+             <p>
+                 <a target="_blank" href="http://wesleycota.com"> Wesley Cota</a> (Universidade Federal de Viçosa, Minas Gerais, Brazil)<br>
+                 <a target="_blank" href="http://deim.urv.cat/~sergio.gomez/"> Sergio Gómez </a> (Universitat Rovira i Virgili, Tarragona, Spain)<br>
+                 <a target="_blank" href="http://deim.urv.cat/~clara.granell/">Clara Granell</a> (Universidad de Zaragoza, Zaragoza, Spain) <br>
+                 <a target="_blank" href="https://www.linkedin.com/in/jtmatamalas"> Joan T. Matamalas</a> (Harvard Medical School, Boston, USA) <br>
+                 <a target="_blank" href="https://twitter.com/sorianopanos">David Soriano-Paños</a> (Universidad de Zaragoza, Zaragoza, Spain)<br>
+                 <a target="_blank" href="https://twitter.com/stinomat">Benjamin Steinegger</a>  (Universitat Rovira i Virgili, Tarragona, Spain)<br>
+             </p>
+ 
+             <br>
+             <hr class="barrita">
+             <br>
+
+
+
+        </main>
+
+
+       <footer>
+            <p> </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
