@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159377200-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-159377200-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mapa de riesgo COVID-19</title>
+    <meta name="description" content="Mapa de Riesgo COVID-19 - España.">
+    <link rel="stylesheet" href="../../main_v5.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Raleway:300,400,500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <!-- <img src="images/logo.png" alt="Logo">-->
+            <!--  nav bar -->
+            <nav>
+                <a href="#modelo">MODELO</a>
+                <a href="#resultados">RESULTADOS</a>
+                <a href="#FAQsection">PREGUNTAS FREQUENTES</a>
+                <a href="#autores">AUTORES</a>
+                <a id="eng" href="../pt/index.html">IN ENGLISH</a>
+                <a href="../../spain/es/index.html">MAPA DE RISCO DA ESPANHA</a>
+                <a href="../../brazil/pt/index.html">MAPA DE RISCO DO BRASIL</a>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Mapa de risco de propagação do COVID-19 <br> por contagio comunitário em Portugal</h1>
+
+<!--            <div class="messagem verde">-->
+<!--                <!--A causa de la falta de datos de fuentes oficiales que informen de manera fiable y actualizada de los nuevos casos detectados y su localización, lamentamos comunicar que debemos interrumpir las actualizaciones de este mapa con fecha de última actualización: 3 de Marzo 2020. <br><br>-->
+<!--                Nuestro equipo seguirá trabajando para poder ofrecer nuevos análisis pronto.-->
+<!--                <div class="firma">- El equipo investigador</div>-->-->
+<!--					 Depois de interromper a atualização desta página em 3 de Março de 2020 por falta de dados oficiais que nos proporcionacem informações sobre os casos detectados -->
+<!--					em tempo real e sua localização, anunciamos que a...-->
+<!--                Después de interrumpir la actualización de esta página con fecha 3 de Marzo 2020 por falta de reportes oficiales que nos proporcionaran información sobre los casos detectados en tiempo real y su ubicación, anunciamos que a fecha 10 de Marzo de 2020 nos encontramos en disposición de volver a actualizar resultados. Para más información, consultad <a href="#losdatos">esta sección</a>. -->
+<!--            </div>-->
+
+<!--            <div class="message new">-->
+<!--                UPDATE: Ver nuestro mapa de predicción de sobrecarga sanitaria <a href="#sobrecarga">aquí</a> y las curvas de incidencia <a href="#curvasUCI">aquí</a>. -->
+<!--            </div>-->
+
+
+            <br>
+            <hr class="barrita">
+            <br>
+            <h2>Motivação</h2>
+            <p>
+					 A expansão do COVID-19 coloca muitos desafios ao nosso sistema social e de saúde. Um deles é ser capaz de prever e quantificar o surgimento de novos casos derivados de infecções comunitárias em todo o país. Entende-se por contágio comunitário aquelas pessoas afetadas pelo vírus para quem a fonte da infecção é desconhecida, ou seja, sem histórico de viagens recentes às áreas afetadas ou vínculos diretos com outras pessoas infectadas.
+            </p>
+ 
+            <p>
+					 Uma das principais dificuldades que estamos enfrentando atualmente é a detecção precoce de casos, medida essencial para o seu confinamento e tratamento médico. Esse vírus é caracterizado por um estado epidêmico bastante longo e assintomático ou com sintomas leves ou moderados, que podem durar até 14 dias, de acordo com os dados disponíveis. O resultado de não ter uma detecção precoce influencia significativamente a propagação da epidemia e, como resultado, dificulta bastante a implementação de medidas efetivas de controle.</p>
+ 
+            <p>
+                Neste site, mostramos os resultados do risco estimado de epidemia em Portugal, no nível de concelhos, derivado de um modelo para a disseminação de epidemias com base na mobilidade habitual (recorrente) entre municípios da população ativa em Portugal, de acordo com dados fornecidos em colaboração com a <a target="_blank"  href="https://www.nos.pt/"> NOS </a>.</p>
+ 
+            <p>
+					 Nosso modelo incorpora os dados epidemiológicos relatados até (?) cedidos pelo (Governo de Portugal) para o vírus responsável pelo COVID-19, que foi oficialmente chamado SARS-CoV-2, e dados demográficos e de mobilidade entre os concelhos da Portugal. O modelo pode ser perfeitamente transferido para outros locais onde esses dados estão disponíveis.</p>
+ 
+            <!------------------ RESULTADOS ---------------------------------->
+
+            <br>
+            <hr class="barrita" id="resultados">
+            <br>
+            <h2>Resultados</h2>
+
+            <h3>Mapa de risco</h3>
+            <p>
+					O mapa de risco gerado com o modelo produz um indicador para cada concelho da fração da população que se estima ter contraído a infecção por SARS-COV-2 através do contágio comunitário. Os termos municipais sombreados em cinza correspondem àqueles para os quais não há dados disponíveis.
+            </p>
+
+            <p class="stressed">Devido ao alto volume de visitas, o mapa pode demorar alguns segundos para carregar.</p>
+
+            <iframe src="../../map/?lang=pt&country=pt" id="map" frameborder="0" allowfullscreen></iframe>
+
+
+            <p class="stressed">
+                Os dados numéricos de risco para o mapa podem ser baixados <a href="update.link" target="_blank"> neste link no formato Excel </a> e <a href = "update.link "target =" _ blank "> aqui em formato pdf.</a>
+            </p><br>
+
+<!--            <h3 id="sobrecarga">Mapa de sobrecarga hospitalaria</h3>-->
+
+<!--            <p>-->
+<!--                De acuerdo con la predicción de casos de CoVID-19, según el modelo, podemos prever el factor de sobrecarga del sistema sanitario de atención de cuidados intensivos UCI.-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                En primer lugar, <b>suponemos un escenario optimista </b> de ocupación de UCIs del 0% pre-CoVID, es decir, todas las camas UCI se suponen libres. Sobre este escenario calculamos los casos totales con necesidad de UCI por CoVID-19 que tendremos el día 18 de Marzo. Este valor lo obtenemos como el 5% del total de casos por CoVID-19 que ofrece el modelo. Este 5% corresponde a los datos más recientes de atención UCI necesaria por CoVID-19 según el último reporte oficial de los casos en España.-->
+<!--            </p>-->
+
+<!--            <img src="../resources/mapa_sobrecarga_dia18.png" alt="Mapa de sobrecarga hospitalaria">-->
+
+<!--            <br> <br>-->
+<!--            <h3 id="curvasUCI">Predicción de la incidencia de casos CoVID-19 críticos en España</h3>-->
+<!--            <p>-->
+<!--                Presentamos la evolución del número de pacientes que requerirán de hospitalización en unidades de cuidados intensivos (UCI) por CoVID-19. Las curvas se calculan con nuestro modelo de predicción, para tres tipos de intervenciones:<br>-->
+<!--                <ul>-->
+<!--                    <li>Sin ningún tipo de restricción de movilidad.</li>-->
+<!--                    <li>Con restricción de movilidad parcial (donde se permite movilidad laboral en un 50%)</li>-->
+<!--                    <li>Con restricción total de movilidad (no se permite movilidad laboral salvo en servicios de primera necesidad)</li>-->
+<!--                </ul>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                Se observa como las intervenciones nos alejan del riesgo de atravesar el techo sanitario los próximos días.-->
+<!--            </p>   -->
+<!--            <img src="../resources/containment_lineal_white-03.png" alt="Curvas de incidencia de casos críticos COVID-19 en España.">-->
+
+
+            <!------------------ MODELO ---------------------------------->
+            <br>
+            <hr class="barrita" id="modelo">
+            <br>
+            <h2>Modelo</h2>
+            <p>
+					O modelo que usamos é uma nova versão de uma família de modelos epidemiológicos de tempo discreto, que foi especialmente modificada para representar a dinâmica de transmissão do SARS-COV-2, o vírus que causa a doença de COVID-19.
+            </p>
+            <p>
+					O modelo visa estimar a taxa de risco de cada concelho de Portugal, levando em consideração: (I) a dinâmica de transmissão do SARS-COV-2 e (II) os padrões de mobilidade recorrente em Portugal e (III) a demografia da população portuguesa.
+            </p>
+
+            <p>
+				Em relação à transmissão de vírus, usamos um modelo compartimental, o que significa que a população é dividida de acordo com seu status epidemiológico em compartimentos, que são:
+                <ul>
+                    <li>Suscetível: indivíduo que não contraiu a doença, mas pode contrai-la.</li>
+                    <li>Exposto: indivíduo que está infectado, mas está na fase de incubação e, portanto, ainda não é infeccioso.</li>
+                    <li>Assintomático (ou com sintomas leves): indivíduo que já está infectado e infeccioso, mas não apresenta sintomas relevantes que são facilmente identificáveis.</li>
+                    <li>Infectado: em nosso modelo, um indivíduo infectado é infeccioso, mas mostra sintomas facilmente atribuíveis a uma infecção por COVID-19, facilitando a detecção.</li>
+                    <li>Hospitalizado: indivíduo que está infectado, mas foi detectado e requer hospitalização. Esse indivíduo não espalha mais a doença porque deveria estar confinado ao hospital.</li>
+                    <li>Recuperado: Um indivíduo que não é mais infeccioso e não pode contrair o mesmo vírus novamente, porque ele se recuperou da infecção e desenvolveu imunidade ou porque morreu.
+</li>
+                </ul>
+            </p>
+            <p> 
+						As transições entre compartimentos são reguladas pelas probabilidades de transmissão, recuperação etc., que derivamos dos estudos COVID-19 publicados até agora.       
+            </p>
+
+            <p>
+					Em relação à mobilidade, utilizamos os dados, devidamente anonimizados, fornecidos pela NOS, que coletam as viagens feitas para o trabalho entre os concelhos e dentro dos concelhos. Este conjunto de dados relata o fluxo médio entre todos concelhos de Portugal para o mês de Janeiro de 2020. Incorporamos a mobilidade ao modelo porque consideramos essencial entender como uma infecção se espalha pelo território. Nosso modelo permite simular diferentes cenários de restrições (locais ou globais) na mobilidade, e calcular os riscos resultantes que observaríamos no caso de impor tais restrições.
+            </p>
+
+<!--            <p>-->
+<!--                Em relação à demografia, consideramos essencial dividir a população do país em três compartimentos: jovens (0 a 25 anos), adultos (26 a 65) e idosos (> 66). A evidência mais recente relatada sobre o COVID-19 é que afeta cada um desses grupos em uma extensão diferente. Em nosso modelo, as diferenças que estabelecemos entre esses três grupos são essencialmente as seguintes:-->
+<!--                <ul>-->
+<!--                    <li>Jovens e idosos não se movem pelo território com a mesma probabilidade que os adultos.</li>-->
+<!--                    <li>Os jovens têm, mais provavelmente do que o resto, infecções em que apenas uma fase assintomática é observada (ou com sintomas leves) e, portanto, são mais difíceis de detectar.</li>-->
+<!--                    <li>Os idosos requerem hospitalização com muito mais probabilidade do que os jovens ou adultos.</li>-->
+<!--                </ul>-->
+            </p>
+
+            <h4>Limitações</h4>
+            <p>
+                <ul>
+                    <li>O modelo não prevê a importação de casos internacionais.</li>
+                    <li>O modelo assume os parâmetros epidemiológicos relatados até o momento, mas que podem variar dependendo dos estudos epidemiológicos.</li>
+                    <li>O modelo assume que os dados de mobilidade não variam, ou seja, a estimativa mudaria substancialmente se a mobilidade fosse restrita.</li>
+                </ul>
+            </p>
+
+            <h4>Vantagens</h4>
+            <p>
+                <ul>
+                    <li>O modelo permite que os parâmetros epidemiológicos sejam alterados conforme relatado em futuros estudos epidemiológicos.</li>
+                    <li>O modelo permite estudar a influência do período assintomático e sua infecciosidade associada.</li>
+                    <li>Com base nesses parâmetros, podemos estimar o mapa de risco de novos casos, antecipando a disseminação do vírus por indivíduos assintomáticos.</li>
+                    <li>As restrições de mobilidade de massa (quarentena) podem ser facilmente introduzidas no modelo, permitindo a obtenção de novos valores de risco sob essas medidas. Isso pode ser útil para as autoridades de saúde, que poderiam usar esse modelo para testar a eficácia das restrições de mobilidade na propagação do vírus.</li>
+                </ul>
+            </p>
+
+            <h4 id="losdatos" >O problema dos dados (Retirar?)</h4>
+            <p>
+                Nosso modelo pode calcular, com base nas condições iniciais (um certo número de casos detectados e sua localização), uma estimativa de como a epidemia evoluiria em nosso país. Na primeira fase da propagação da epidemia na Espanha, a maioria dos casos detectados foi "importada", ou seja, indivíduos que contraíram a doença fora do país e que posteriormente viajaram para a Espanha. Esses casos não podem ser detectados pelo modelo, pois não estão relacionados à dinâmica da transmissão de vírus no país. Por esse motivo, em uma fase em que os infectados são importados principalmente, é essencial ter dados confiáveis em tempo real para fazer previsões. Sem dados oficiais, decidimos interromper a manutenção do nosso mapa de riscos.
+            </p>
+
+            <p>
+					 Atualmente, os casos autóctones, ou seja, aqueles que se originaram no país por transmissão local representam uma grande proporção do total de casos. Esses casos são detectados pelo nosso modelo, que, com base nas condições iniciais dos casos que existiam na primeira fase da epidemia (principalmente casos importados), evolui o sistema e obtém a estimativa atual do risco de infecção. É por isso que disponibilizamos novamente publicamente os resultados obtidos. 
+            </p>
+
+            <!------ FAQs ------------------------------------------------------------------>
+            <br>
+            <hr class="barrita" id="FAQsection">
+            <br>
+            <h2>Perguntas frequentes</h2>   
+
+            <button class="accordion">
+                O que é representado neste mapa?
+            </button>
+            <div class="panel">
+                <p>
+                    É representado nesse mapa, para cada concelho, um indicador da fração da população que se estima ter contraído a infecção por COVID-19 por contágio na comunidade.
+                </p>
+            </div>
+
+            <button class="accordion">
+                O que é um modelo matemático e para que serve?
+            </button>
+            <div class="panel">
+                <p>
+                    Um modelo matemático é uma representação simplificada da realidade na forma de equações matemáticas. As equações geradas podem então ser usadas para entender quais fenômenos ocorreriam em determinadas circunstâncias. O exemplo mais comum de um modelo matemático são os modelos meteorológicos, que permitem fazer a previsão do tempo que será realizado nos próximos dias.
+                </p>
+            </div>
+
+            <button class="accordion">
+                O que seu modelo assume?
+            </button>
+            <div class="panel">
+                <p>
+						Nosso modelo é uma nova versão de uma família de modelos já estabelecida, denominada modelos de compartimentos epidemiológicos. Em nosso modelo, projetado especialmente para o COVID-19, supomos que um indivíduo possa estar saudável, no período de incubação, infectado, mas assintomático, infectado e apresentando sintomas, recuperado ou falecido. As transições entre esses compartimentos são reguladas pelos parâmetros específicos da doença.
+                </p>
+            </div>
+
+            <button class="accordion">
+					De onde você tirou os parâmetros?
+            </button>
+            <div class="panel">
+                <p>
+						Os parâmetros foram obtidos nos artigos científicos mais recentes sobre a epidemiologia deste novo vírus causador da doença COVID-19, oficialmente denominada SARS-CoV-2. Os parâmetros podem variar conforme a pesquisa continua sobre eles.
+                </p>
+            </div>
+
+
+            <button class="accordion">
+                Quais dados de mobilidade você usou para o seu modelo?
+            </button>
+            <div class="panel">
+                <p>
+						Estamos usando os dados de mobilidade fornecidos através da colaboração com a NOS, que através da ultilização de telemóveis estimam a mobilidade da população que trabalha em cada concelho. Esses dados medem principalmente o fluxo diário entre a residência e o trabalho e vice-versa, embora contenham outros fatores de mobilidade não necessariamente relacionados ao trabalho.
+                </p>
+            </div>
+
+            <button class="accordion">
+					 Se alguém reside ou trabalha em uma área com risco de 0,1%, isso significa que esse indivíduo tem 1 em <br> 1000 chances de contrair a doença?
+            </button>
+            <div class="panel">
+                <p>
+						Não. Um indicador de risco de 0,1% em um concelho indica que se estima que 1 em cada 1.000 indivíduos na população desse município possa estar infectado (assintomático ou sintomático). A probabilidade de contrair a doença depende de mais fatores, como o número de contatos que são feitos, os locais para os quais você viaja, as horas de mobilidade etc. De qualquer forma, o risco de infecção em cada município pode ser interpretado como o "estado potencial de saúde desse município em relação ao COVID-19".                </p>
+            </div>
+
+
+            <button class="accordion">
+                Vocês atualizam os dados do modelo toda vez que novos casos são detectados?
+            </button>
+            <div class="panel">
+                <p>
+						Não. Esse processo é feito durante os primeiros dias de infecção em Portugal, pois a maioria dos casos era "importada" e, portanto, eles precisavam ser inseridos manualmente em nosso modelo. Agora, a epidemia é generalizada o suficiente para que a maioria das infecções seja local, o que nosso modelo captura. Partimos das condições iniciais, que são os casos relatados na primeira fase da epidemia, deixamos o modelo evoluir e obtemos a previsão de risco para os dias seguintes.                
+					</p>
+            </div>
+
+<!--            <button class="accordion">-->
+<!--                Por que vocês ofereceram um único mapa de risco antes e agora há uma previsão para vários dias?-->
+<!--            </button>-->
+<!--            <div class="panel">-->
+<!--                <p>-->
+<!--						Devido ao fato de que agora a epidemia está em uma fase diferente. Inicialmente, como havia muito poucos casos e a maioria era importada, as condições iniciais (número e origem dos casos identificados) foram muito decisivas no resultado de nossa estimativa. Portanto, foi necessário alterar essas condições iniciais todos os dias, e a previsão dos casos que obtivemos foi em um prazo muito curto. Agora, a evolução da epidemia não depende mais dos casos importados que possamos ter, e podemos avaliar o modelo por mais dias, oferecendo uma previsão viável para os dias seguintes.                -->
+<!--					</p>-->
+<!--            </div>-->
+
+            <button class="accordion">
+						O que significa mobilidade habitual recorrente?
+            </button>
+            <div class="panel">
+                <p>
+						Usamos os dados obtidos através de colaboração com a NOS, esses dados são obtidos através dos padrões de utilização de telemóveis, e indicam a mobilidade da população ativa em cada concelho. Esses dados relatam principalmente a mobilidade de casa para o trabalho e vice-versa, embora contenham outros fatores de mobilidade que não são necessariamente ocupacionais.
+                </p>
+            </div>
+
+            <button class="accordion">
+                (Por que alguns municípios estão sombreados em cinza?)(??)
+            </button>
+            <div class="panel">
+                <p>
+                    Alguns municípios não aparecem nos nossos dados de mobilidade do INE, o motivo mais frequente é que sua população está abaixo de 100 habitantes.
+                </p>
+            </div>
+
+            <button class="accordion">
+                (Por que existem concelhos com risco de 0% quando estão claramente cercados por áreas de risco de infecção?)(??)
+            </button>
+            <div class="panel">
+                <p>
+                    Os dados de mobilidade que relatamos apenas esses fluxos habituais de mobilidade diária de mais de dez pessoas. Nos casos de territórios onde não há risco, apesar de suas áreas adjacentes estarem em risco, o que acontece é que suas entradas e saídas são inferiores a dez pessoas e, portanto, em nosso modelo, elas se comportam como áreas isoladas. .
+                </p>
+            </div>
+
+            <script src="../../accordion.js"></script>
+
+            <br>
+            
+
+            <!------------------ AUTORES ---------------------------------->
+            <br>
+            <hr class="barrita" id="autores">
+            <br>
+            <h2 id="FAQsection">Autores</h2>   
+
+
+            <p class="stressed">Coordenadores do projeto:</p>
+            <p>
+                <a target="_blank" href="http://deim.urv.cat/alexandre.arenas">Alex Arenas</a> (Universitat Rovira i Virgili, Tarragona, Spain)<br>
+                <a target="_blank" href="http://complex.unizar.es/~jesus/">Jesús Gómez-Gardeñes</a> (Universidad de Zaragoza, Zaragoza, Spain)<br>
+            </p>
+            <p class="stressed">Investigadores participantes:</p>
+            <p>
+                <a target="_blank" href="http://wesleycota.com"> Wesley Cota</a> (Universidade Federal de Viçosa, Minas Gerais, Brazil)<br>
+                <a target="_blank" href="http://deim.urv.cat/~sergio.gomez/"> Sergio Gómez </a> (Universitat Rovira i Virgili, Tarragona, Spain)<br>
+                <a target="_blank" href="http://deim.urv.cat/~clara.granell/">Clara Granell</a> (Universidad de Zaragoza, Zaragoza, Spain) <br>
+                <a target="_blank" href="https://www.linkedin.com/in/jtmatamalas"> Joan T. Matamalas</a> (Harvard Medical School, Boston, USA) <br>
+                <a target="_blank" href="https://twitter.com/sorianopanos">David Soriano-Paños</a> (Universidad de Zaragoza, Zaragoza, Spain)<br>
+                <a target="_blank" href="https://twitter.com/stinomat">Benjamin Steinegger</a>  (Universitat Rovira i Virgili, Tarragona, Spain)<br>
+            </p>
+
+            <br>
+            <hr class="barrita">
+            <br>
+        </main>
+
+       
+
+       <footer>
+            <p> </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

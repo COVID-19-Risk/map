@@ -10,6 +10,23 @@ var changeLang = function(lang) {
                 HomeLabel : 'Main page',
                 ReloadLabel : 'Reload',
                 esName : 'Spain',
+                brName : 'Brazil',
+                ptName : 'Portugal',
+                // xxName : 'xx'
+            };
+            break;
+        case 'pt':
+            return {
+                PageTitle : 'Mapa interativo do risco do SARS-CoV-2: ',
+                RiskHeader : 'Risco SARS-CoV-2',
+                HoverMapText : 'Passe o mouse sobre uma cidade',
+                NoData : 'Sem dados',
+                DateLabel : 'Data',
+                HomeLabel : 'Página principal',
+                ReloadLabel : 'Atualizar',
+                esName : 'Espanha',
+                brName : 'Brasil',
+                ptName : 'Portugal',
                 // xxName : 'xx'
             };
             break;
@@ -23,6 +40,8 @@ var changeLang = function(lang) {
                 HomeLabel : 'Pagina principal',
                 ReloadLabel : 'Reload',
                 esName : 'España',
+                brName : 'Brasil',
+                ptName : 'Portugal',
                 // xxName : 'xx'
             };
       };

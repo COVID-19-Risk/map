@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mapa de riesgo COVID-19</title>
     <meta name="description" content="Mapa de Riesgo COVID-19 - España.">
-    <link rel="stylesheet" href="../../main_v4.css">
+    <link rel="stylesheet" href="../../main_v5.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Raleway:300,400,500&display=swap" rel="stylesheet">
 
 </head>
@@ -30,7 +30,8 @@
                 <a href="#FAQsection">PREGUNTAS FRECUENTES</a>
                 <a href="#autores">AUTORES</a>
                 <a id="eng" href="../en/index.html">IN ENGLISH</a>
-                <!--<a href="../../switzerland/en/index.html">MAPA DE RIESGO DE SUIZA</a>-->
+                <a href="../../portugal/pt/index.html">MAPA DE RISCO DE PORTUGAL</a>
+                <a href="../../brazil/pt/index.html">MAPA DE RISCO DO BRAZIL</a>
             </nav>
         </header>
 
@@ -42,6 +43,10 @@
                 Nuestro equipo seguirá trabajando para poder ofrecer nuevos análisis pronto.
                 <div class="firma">- El equipo investigador</div>-->
                 Después de interrumpir la actualización de esta página con fecha 3 de Marzo 2020 por falta de reportes oficiales que nos proporcionaran información sobre los casos detectados en tiempo real y su ubicación, anunciamos que a fecha 10 de Marzo de 2020 nos encontramos en disposición de volver a actualizar resultados. Para más información, consultad <a href="#losdatos">esta sección</a>. 
+            </div>
+
+            <div class="message new">
+                UPDATE: Ver nuestro mapa de predicción de sobrecarga sanitaria <a href="#sobrecarga">aquí</a> y las curvas de incidencia <a href="#curvasUCI">aquí</a>. 
             </div>
 
 
@@ -69,6 +74,7 @@
             <br>
             <h2>Resultados</h2>
 
+            <h3>Mapa de riesgo</h3>
             <p>
                 El mapa de riesgo que se genera con el modelo produce un indicador por término municipal de la fracción de la población que se estima que puede haber contraído la infección del SARS-COV-2 por contagio comunitario. Los términos municipales sombreados en gris corresponden a aquellos para los cuales no se dispone de datos.
             </p>
@@ -81,6 +87,33 @@
             <p class="stressed">
                 Los datos de riesgo numéricos correspondientes al mapa se pueden descargar desde <a href="../resources/Risk_Municipio_2020_03_14-18.xlsx" target="_blank">este enlace en formato Excel</a> y <a href="../resources/Risk_Municipio_2020_03_14-18.pdf" target="_blank">aquí en formato pdf.</a>
             </p><br>
+
+            <h3 id="sobrecarga">Mapa de sobrecarga hospitalaria</h3>
+
+            <p>
+                De acuerdo con la predicción de casos de CoVID-19, según el modelo, podemos prever el factor de sobrecarga del sistema sanitario de atención de cuidados intensivos UCI.
+            </p>
+            <p>
+                En primer lugar, <b>suponemos un escenario optimista </b> de ocupación de UCIs del 0% pre-CoVID, es decir, todas las camas UCI se suponen libres. Sobre este escenario calculamos los casos totales con necesidad de UCI por CoVID-19 que tendremos el día 18 de Marzo. Este valor lo obtenemos como el 5% del total de casos por CoVID-19 que ofrece el modelo. Este 5% corresponde a los datos más recientes de atención UCI necesaria por CoVID-19 según el último reporte oficial de los casos en España.
+            </p>
+
+            <img src="../resources/mapa_sobrecarga_dia18.png" alt="Mapa de sobrecarga hospitalaria">
+
+            <br> <br>
+            <h3 id="curvasUCI">Predicción de la incidencia de casos CoVID-19 críticos en España</h3>
+            <p>
+                Presentamos la evolución del número de pacientes que requerirán de hospitalización en unidades de cuidados intensivos (UCI) por CoVID-19. Las curvas se calculan con nuestro modelo de predicción, para tres tipos de intervenciones:<br>
+                <ul>
+                    <li>Sin ningún tipo de restricción de movilidad.</li>
+                    <li>Con restricción de movilidad parcial (donde se permite movilidad laboral en un 50%)</li>
+                    <li>Con restricción total de movilidad (no se permite movilidad laboral salvo en servicios de primera necesidad)</li>
+                </ul>
+            </p>
+            <p>
+                Se observa como las intervenciones nos alejan del riesgo de atravesar el techo sanitario los próximos días.
+            </p>   
+            <img src="../resources/containment_lineal_white-03.png" alt="Curvas de incidencia de casos críticos COVID-19 en España.">
+
 
             <!------------------ MODELO ---------------------------------->
             <br>

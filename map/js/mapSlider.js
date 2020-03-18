@@ -32,10 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // determine country
         switch(country) {
-            // case 'xx':
-            //     countryFile = 'xx';
-            //     countryName = lang.xxName;
-            //     break;
+            case 'pt':
+                countryFile = 'pt';
+                countryName = lang.ptName;
+                break;
+            case 'br':
+                countryFile = 'br';
+                countryName = lang.brName;
+                break;
             default:
                 countryFile = 'es';
                 countryName = lang.esName;
@@ -297,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
             topBgPadding: '12px',
             leftBgPadding: '22px',
             bottomBgPadding : '10px',
-            defaultSelection: 1, //timelineItems.length,
+            defaultSelection: 3, //timelineItems.length,
             position: 'topleft',
             //initializeChange: false,
             changeMap: updateMap

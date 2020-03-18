@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Risk map of COVID-19 - Spain</title>
     <meta name="description" content="Risk map COVID-19 - Spain.">
-    <link rel="stylesheet" href="../../main_v4.css">
+    <link rel="stylesheet" href="../../main_v5.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,6 +27,8 @@
                 <a href="#FAQsection">FREQUENTLY ASKED QUESTIONS</a>
                 <a href="#autores">AUTHORS</a>
                 <a id="eng" href="../es/index.html">EN CASTELLANO</a>
+                <a href="../../portugal/en/index.html">RISK MAP FOR PORTUGAL</a>
+                <a href="../../brazil/en/index.html">RISK MAP FOR BRAZIL</a>
             </nav>
         </header>
 
@@ -40,6 +42,10 @@
                Our team will keep on working to be able to offer new analyses soon. <br>
                <div class="firma">- The researchers</div>-->
                After temporarily discontinuing the maintenance of this risk map because of the lack of official and reliable data of the detected cases in March, 3, 2020, we are able to announce that as of March, 10, 2020, we are in the position of offering new results. Please read <a href="#losdatos">this section</a> for more information. 
+            </div>
+
+            <div class="message new">
+                UPDATE: We have released a <a href="#sobrecarga">map of hospital overload</a> and <a href="#curvasUCI">curves of ICU hospitalization</a>. 
             </div>
 
             <!------------------ MOTIVATION ---------------------------------->
@@ -69,6 +75,7 @@
             <hr class="barrita" id="resultados">
             <br>
             <h2>Results</h2>
+            <h3>Risk map</h3>
 
             <p>
                 The risk map generated with our model produces an indicator for each municipality of the fraction of the population that is estimated to have contracted the infection of SARS-CoV-2 through local contact. Those areas shaded in gray correspond to areas for which there is no data available. 
@@ -84,6 +91,32 @@
             <p class="stressed">
                 The numerical data corresponding to the map can be downloaded <a href="../resources/Risk_Municipio_2020_03_14-18.xlsx" target="_blank">here in Excel format</a> and <a href="../resources/Risk_Municipio_2020_03_14-18.pdf" target="_blank">here in pdf format</a>.
             </p><br>
+
+            <h3 id="sobrecarga">Hospital overload map</h3>
+            <p>
+                After estimating, using our model, the number of expected infections of CoVID-19, we can calculate the overload that the health care facilities in Spain will face in attending patients requiring ICU attention.
+            </p>
+            <p>
+                Our assumptions are the following. First, we are <b> assuming the most optimistic scenario </b> regarding the occupation of the ICU units, which is 0% before CoVID-19, meaning we assume all ICU units are available for CoVID patients. Under this scenario we calculate the total number of infections that will require ICU hospitalization for the day of 18 of March. This value is calculated as the 5% of the total number of cases that our model predicts for that day. This 5% corresponds to the number of cases of CoVID-19 that required ICU in Spain, as published in the most recent official reports.
+            </p>
+
+            <img src="../resources/mapa_sobrecarga_dia18.png" alt="Mapa de sobrecarga hospitalaria">
+
+            <br> <br>
+            <h3 id="curvasUCI">Incidence curves for patients requiring ICU hospitalization due to CoVID-19 in Spain</h3>
+
+            <p>
+                In the following we present the evolution of the number of patients that will require ICU hospitalization due to CoVID-19. The curves are calculated using our model, for three different types of interventions:
+                <ul>
+                    <li>With no mobility restrictions.</li>
+                    <li>With partial mobility restrictions: commuting to work is allowed in a 50%.</li>
+                    <li>With total restrictions of mobility: work-related traveling is not allowed except for basic services.</li>
+                </ul>
+            </p>
+            <p>
+                We observe how the different interventions have different outcomes in terms of overloading the ICU healthcare facilities.
+            </p>   
+            <img src="../resources/containment_lineal-04.png" alt="Incidence curves for CoVID patients requiring ICU hospitalization.">
 
             <!------------------ MODEL ---------------------------------->
             <br>
