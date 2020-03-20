@@ -80,9 +80,9 @@ body{
     /*padding-top: 3.5em;*/
     /*margin-top: -0.4em;*/
    /* margin-top: 2em;*/
-    margin-left: 3em;
+    margin-left: 1em;
     margin-top: 1em;
-    margin-right: 3em;
+    margin-right: 1em;
     width: auto;
     text-align:center;
     /*Abans no li he posat el width i no feia res. Ara que li he posat width, li trec als elements particulars*/
@@ -166,6 +166,15 @@ main {
     padding-right:240px; */
     padding-left: 5em;
     padding-right: 5em;
+}
+
+.mainportada{
+    /*min-height: 400px;*/
+    margin-top:5rem;
+    /*  padding-left:240px;
+    padding-right:240px; */
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 main p{
@@ -455,6 +464,7 @@ main .accordion {
 .messagecontainer{
     display:flex;
     justify-content: space-between;
+    flex-flow: row wrap;
 }
 
 /* BUTTONS */
