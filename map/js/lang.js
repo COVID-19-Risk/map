@@ -19,7 +19,7 @@ var changeLang = function(lang) {
             return {
                 PageTitle : 'Mapa interativo do risco do SARS-CoV-2: ',
                 RiskHeader : 'Risco SARS-CoV-2',
-                HoverMapText : 'Passe o mouse sobre uma cidade',
+                HoverMapText : 'Passe o cursor sobre uma cidade',
                 NoData : 'Sem dados',
                 DateLabel : 'Data',
                 HomeLabel : 'Página principal',

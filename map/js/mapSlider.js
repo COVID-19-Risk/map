@@ -90,12 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
         map.fitBounds([gps1, gps2]);
 
         var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-                'Adapted by <a href="http://wesleycota.com/" ref="author">Wesley Cota</a>',
+            attribution: 'Map data &copy; <a target="_parent" href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a target="_parent" href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Adapted by <a target="_parent" href="http://wesleycota.com/" ref="author">Wesley Cota</a>',
         }).addTo(map);
         var positronLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
+                attribution: '&copy; <a target="_parent" href="https://carto.com/">CartoDB</a>',
                 maxNativeZoom: 12,
                 pane: 'labels'
         }).addTo(map);
@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
             topBgPadding: '12px',
             leftBgPadding: '22px',
             bottomBgPadding : '10px',
-            defaultSelection: 3, //timelineItems.length,
+            defaultSelection: 2, //timelineItems.length,
             position: 'topleft',
             //initializeChange: false,
             changeMap: updateMap

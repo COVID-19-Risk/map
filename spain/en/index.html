@@ -14,45 +14,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Risk map of COVID-19 - Spain</title>
     <meta name="description" content="Risk map COVID-19 - Spain.">
-    <link rel="stylesheet" href="../../main_v5.css">
+    <link rel="stylesheet" href="../../main_light.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+
+    <meta property="og:url"                content="https://covid-19-risk.github.io/map/spain/en/index.html" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Risk map of COVID-19 - Spain" />
+    <meta property="og:description"        content="Risk map COVID-19 - Spain." />
+    <meta property="og:image"              content="https://covid-19-risk.github.io/map/imgs/corona.jpg" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="">
+    <link href="../../imgs/favicon.ico" rel="icon">
+    <link href="../../imgs/touch-icon.png" rel="apple-touch-icon">
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <nav>
-                <a href="#modelo">MODEL</a>
-                <a href="#resultados">RESULTS</a>
-                <a href="#FAQsection">FREQUENTLY ASKED QUESTIONS</a>
-                <a href="#autores">AUTHORS</a>
-                <a id="eng" href="../es/index.html">EN CASTELLANO</a>
-                <a href="../../portugal/en/index.html">RISK MAP FOR PORTUGAL</a>
-                <a href="../../brazil/en/index.html">RISK MAP FOR BRAZIL</a>
-            </nav>
-        </header>
+
+    <header>
+
+        <div class="logo">
+            #CoVID-19RISK
+        </div>
+        <div class="countries">
+            <a href="#" class="countryLink actiu">SPAIN</a>
+            <a href="../../brazil/en/index.html" class="countryLink">BRAZIL</a>
+            <a href="../../portugal/en/index.html" class="countryLink">PORTUGAL</a>
+        </div>
+    </header>
+    
 
     
+    <div class="container">
+
+        <nav>
+            <a href="#modelo">MODEL</a>
+            <a href="#resultados">RESULTS</a>
+            <a href="#FAQsection">FREQUENTLY ASKED QUESTIONS</a>
+            <a href="#autores">AUTHORS</a>
+            <a id="eng" href="../es/index.html">EN CASTELLANO</a>
+        </nav>
 
         <main>
            <h1>Map of propagation risk of COVID-19 by local contact in Spain</h1>
-
-           <div class="message green">
+           <div class="message dark green">
                <!--Given the lack of official data disclosure informing in a trustworthy and timely manner of the new detected cases and their locations, we regret to inform that we must temporarily discontinue the updates of this map as of March, 3, 2020. <br><br>
                Our team will keep on working to be able to offer new analyses soon. <br>
                <div class="firma">- The researchers</div>-->
                After temporarily discontinuing the maintenance of this risk map because of the lack of official and reliable data of the detected cases in March, 3, 2020, we are able to announce that as of March, 10, 2020, we are in the position of offering new results. Please read <a href="#losdatos">this section</a> for more information. 
             </div>
 
-            <div class="message new">
+            <div class="message dark new">
                 UPDATE: We have released a <a href="#sobrecarga">map of hospital overload</a> and <a href="#curvasUCI">curves of ICU hospitalization</a>. 
             </div>
 
             <!------------------ MOTIVATION ---------------------------------->
 
             <br>
-            <hr class="barrita">
+            <div class="barritaWide"></div>
             <br>
+
             <h2>Motivation</h2>
             <p>
                The spread of COVID-19 is posing many challenges to our social and health systems. One of them is predicting and quantifying the emergence of new cases that follow local contagion at a national scale. By local contagion we refer to those cases of individuals that are infected with the virus but for which the source of infection is unknown, that is, the person affected has not reported any travel to affected areas or any direct contacts with other infected individuals. 
@@ -72,7 +93,9 @@
 
             <!------------------ RESULTS ---------------------------------->
             <br>
-            <hr class="barrita" id="resultados">
+            <!--<hr class="barrita" id="resultados">-->
+            <br>
+            <div class="barritaWide" id="resultados"></div>
             <br>
             <h2>Results</h2>
             <h3>Risk map</h3>
@@ -119,9 +142,10 @@
             <img src="../resources/containment_lineal-04.png" alt="Incidence curves for CoVID patients requiring ICU hospitalization.">
 
             <!------------------ MODEL ---------------------------------->
+            <br><br>
+            <div class="barritaWide" id="modelo"></div>
             <br>
-            <hr class="barrita" id="modelo">
-            <br>
+            <!--<hr class="barrita" id="modelo">-->
             <h2>Model</h2>
             <p>
                 The model we are using is a new version of a family of epidemiological models in discrete time, that has been specifically modified to represent the particular spreading dynamics of SARS-COV-2, the virus causing COVID-19.
@@ -191,8 +215,9 @@
             </p>
 
             <!------ FAQs ------------------------------------------------------------------>
-            <br>
-            <hr class="barrita" id="FAQsection">
+            <!--<hr class="barrita" id="FAQsection">-->
+            <br><br>
+            <div class="barritaWide" id="FAQsection"></div>
             <br>
             <h2>Frequently Asked Questions</h2>  
 
@@ -294,30 +319,66 @@
 
              <!------------------ AUTORES ---------------------------------->
              <br>
-             <hr class="barrita" id="autores">
+             <!--<hr class="barrita" id="autores">-->
              <br>
-             <h2 id="FAQsection">Authors</h2>   
+             <div class="barritaWide" id="autores"></div><br>
+             <h2>Authors</h2>   
  
  
-             <p class="stressed">Principal Investigators:</p>
-             <p>
-                 <a target="_blank" href="http://deim.urv.cat/alexandre.arenas">Alex Arenas</a> (Universitat Rovira i Virgili, Tarragona, Spain)<br>
-                 <a target="_blank" href="http://complex.unizar.es/~jesus/">Jesús Gómez-Gardeñes</a> (Universidad de Zaragoza, Zaragoza, Spain)<br>
-             </p>
-             <p class="stressed">Participating researchers:</p>
-             <p>
-                 <a target="_blank" href="http://wesleycota.com"> Wesley Cota</a> (Universidade Federal de Viçosa, Minas Gerais, Brazil)<br>
-                 <a target="_blank" href="http://deim.urv.cat/~sergio.gomez/"> Sergio Gómez </a> (Universitat Rovira i Virgili, Tarragona, Spain)<br>
-                 <a target="_blank" href="http://deim.urv.cat/~clara.granell/">Clara Granell</a> (Universidad de Zaragoza, Zaragoza, Spain) <br>
-                 <a target="_blank" href="https://www.linkedin.com/in/jtmatamalas"> Joan T. Matamalas</a> (Harvard Medical School, Boston, USA) <br>
-                 <a target="_blank" href="https://twitter.com/sorianopanos">David Soriano-Paños</a> (Universidad de Zaragoza, Zaragoza, Spain)<br>
-                 <a target="_blank" href="https://twitter.com/stinomat">Benjamin Steinegger</a>  (Universitat Rovira i Virgili, Tarragona, Spain)<br>
-             </p>
- 
-             <br>
-             <hr class="barrita">
-             <br>
+             <div class="autores">
+                <h4>Coordinadores del proyecto</h4>
+                <p>
+                    <a target="_blank" href="http://deim.urv.cat/alexandre.arenas">Alex Arenas</a> (Universitat Rovira i Virgili, Tarragona, Spain)
+                </p>
+                <p>
+                    <a target="_blank" href="http://complex.unizar.es/~jesus/">Jesús Gómez-Gardeñes</a> (Universidad de Zaragoza, Zaragoza, Spain)
+                </p>
 
+                <h4>Investigadores participantes</h4>
+                <p>
+                    <a target="_blank" href="http://wesleycota.com"> Wesley Cota</a> (Universidade Federal de Viçosa, Minas Gerais, Brazil)
+                </p>
+                <p>
+                    <a target="_blank" href="http://deim.urv.cat/~sergio.gomez/"> Sergio Gómez </a> (Universitat Rovira i Virgili, Tarragona, Spain)
+                </p>
+                    <p><a target="_blank" href="http://deim.urv.cat/~clara.granell/">Clara Granell</a> (Universidad de Zaragoza, Zaragoza, Spain)
+                </p>
+                <p>
+                    <a target="_blank" href="https://www.linkedin.com/in/jtmatamalas"> Joan T. Matamalas</a> (Harvard Medical School, Boston, USA) 
+                </p>
+                <p>
+                    <a target="_blank" href="https://twitter.com/sorianopanos">David Soriano-Paños</a> (Universidad de Zaragoza, Zaragoza, Spain)
+                </p>
+                <p>
+                    <a target="_blank" href="https://twitter.com/stinomat">Benjamin Steinegger</a>  (Universitat Rovira i Virgili, Tarragona, Spain)
+                </p>
+            </div>
+            
+            <br>
+            <h2>Colaborators</h2>   
+
+            <div class="colaborators">
+               <h4>Portugal Section</h4>
+               <p>
+                   <a target="_blank" href="http://www.namaraujo.net/">Nuno Araújo</a> (Centro de Física Teórica e Computacional, Faculdade de Ciências, U Lisboa, Portugal)
+               </p>
+               <p>
+                   <a target="_blank" href="https://twitter.com/hygorpiaget">Hygor Piaget Melo</a> (Centro de Física Teórica e Computacional, Faculdade de Ciências, U Lisboa, Portugal)
+               </p>
+               <p>
+                   <b>Partners: </b><a target="_blank" href="http://www.nos.pt">NOS</a>, <a target="_blank" href="http://www.dspa.pt">Data Science Portuguese Association</a>, and <a target="_blank" href="http://www.closer.pt">Closer Consulting</a>
+               </p>
+               <h4>Brazil Section</h4>
+               <p>
+                   <a target="_blank" href="http://wesleycota.com"> Wesley Cota</a> (Universidade Federal de Viçosa, Minas Gerais, Brazil)
+               </p>
+               <p>
+                   <a target="_blank" href="https://sites.google.com/site/silvioferreirajr/home"> Silvio C. Ferreira</a> (Universidade Federal de Viçosa, Minas Gerais, Brazil)
+               </p>
+           </div>
+
+            <br>
+            <br>
 
 
         </main>
