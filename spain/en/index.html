@@ -8,7 +8,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-159377200-1');
-    </script>    
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -34,7 +34,7 @@
     <header>
 
         <div class="logo">
-            #CoVID-19RISK
+            #COVID-19RISK
         </div>
         <div class="countries">
             <a href="#" class="countryLink actiu">SPAIN</a>
@@ -42,9 +42,9 @@
             <a href="../../portugal/en/" class="countryLink">PORTUGAL</a>
         </div>
     </header>
-    
 
-    
+
+
     <div class="container">
 
         <nav>
@@ -57,7 +57,7 @@
 
         <main>
            <h1>Map of propagation risk of COVID-19 by local contact in Spain</h1>
-          
+
            <div class="message dark new">
             We temporarily discontinue the update of the map risk for Spain we wait to have enough data of the real mobility under the current mobility restrictions in force after the declaration of the state of alarm.
             </div>
@@ -70,7 +70,7 @@
 
             <h2>Motivation</h2>
             <p>
-               The spread of COVID-19 is posing many challenges to our social and health systems. One of them is predicting and quantifying the emergence of new cases that follow local contagion at a national scale. By local contagion we refer to those cases of individuals that are infected with the virus but for which the source of infection is unknown, that is, the person affected has not reported any travel to affected areas or any direct contacts with other infected individuals. 
+               The spread of COVID-19 is posing many challenges to our social and health systems. One of them is predicting and quantifying the emergence of new cases that follow local contagion at a national scale. By local contagion we refer to those cases of individuals that are infected with the virus but for which the source of infection is unknown, that is, the person affected has not reported any travel to affected areas or any direct contacts with other infected individuals.
             </p>
 
             <p>
@@ -95,13 +95,13 @@
             <h3>Risk map</h3>
 
             <p>
-                The risk map generated with our model produces an indicator for each municipality of the fraction of the population that is estimated to have contracted the infection of SARS-CoV-2 through local contact. Those areas shaded in gray correspond to areas for which there is no data available. 
+                The risk map generated with our model produces an indicator for each municipality of the fraction of the population that is estimated to have contracted the infection of SARS-CoV-2 through local contact. Those areas shaded in gray correspond to areas for which there is no data available.
             </p>
 
             <p class="stressed">
-                Given the high number of visits, the map might take a few seconds to load. 
+                Given the high number of visits, the map might take a few seconds to load.
             </p>
-            
+
             <!-- MAP -->
             <iframe src="../../map/?lang=en" id="map" frameborder="0" allowfullscreen></iframe>
 
@@ -111,19 +111,19 @@
 
             <h3 id="sobrecarga">Hospital overload map</h3>
             <p>
-                After estimating, using our model, the number of expected infections of CoVID-19, we can calculate the overload that the health care facilities in Spain will face in attending patients requiring ICU attention.
+                After estimating, using our model, the number of expected infections of COVID-19, we can calculate the overload that the health care facilities in Spain will face in attending patients requiring ICU attention.
             </p>
             <p>
-                Our assumptions are the following. First, we are <b> assuming the most optimistic scenario </b> regarding the occupation of the ICU units, which is 0% before CoVID-19, meaning we assume all ICU units are available for CoVID patients. Under this scenario we calculate the total number of infections that will require ICU hospitalization for the day of 18 of March. This value is calculated as the 5% of the total number of cases that our model predicts for that day. This 5% corresponds to the number of cases of CoVID-19 that required ICU in Spain, as published in the most recent official reports.
+                Our assumptions are the following. First, we are <b> assuming the most optimistic scenario </b> regarding the occupation of the ICU units, which is 0% before COVID-19, meaning we assume all ICU units are available for CoVID patients. Under this scenario we calculate the total number of infections that will require ICU hospitalization for the day of 18 of March. This value is calculated as the 5% of the total number of cases that our model predicts for that day. This 5% corresponds to the number of cases of COVID-19 that required ICU in Spain, as published in the most recent official reports.
             </p>
 
             <img src="../resources/mapa_sobrecarga_dia18.png" alt="Mapa de sobrecarga hospitalaria">
 
             <br> <br>
-            <h3 id="curvasUCI">Incidence curves for patients requiring ICU hospitalization due to CoVID-19 in Spain</h3>
+            <h3 id="curvasUCI">Incidence curves for patients requiring ICU hospitalization due to COVID-19 in Spain</h3>
 
             <p>
-                In the following we present the evolution of the number of patients that will require ICU hospitalization due to CoVID-19. The curves are calculated using our model, for three different types of interventions:
+                In the following we present the evolution of the number of patients that will require ICU hospitalization due to COVID-19. The curves are calculated using our model, for three different types of interventions:
                 <ul>
                     <li>With no mobility restrictions.</li>
                     <li>With partial mobility restrictions: commuting to work is allowed in a 50%.</li>
@@ -132,7 +132,7 @@
             </p>
             <p>
                 We observe how the different interventions have different outcomes in terms of overloading the ICU healthcare facilities.
-            </p>   
+            </p>
             <img src="../resources/containment_lineal-04.png" alt="Incidence curves for CoVID patients requiring ICU hospitalization.">
 
             <!------------------ MODEL ---------------------------------->
@@ -163,13 +163,13 @@
                     <li>Recovered/removed: an individual who has been infected at a moment in time, but who in the current moment, is not infectious anymore. This could happen because the individual has recovered from the infection and developed immunity, or because the patient has died.</li>
                 </ul>
             </p>
-           
+
             <p>
-                The transitions among the previous compartments are regulated with the specific parameters of the model (transmission probability, recovery probability...etc), and have been derived from the scientific literature published up to the present moment. 
+                The transitions among the previous compartments are regulated with the specific parameters of the model (transmission probability, recovery probability...etc), and have been derived from the scientific literature published up to the present moment.
             </p>
-                
+
             <p>
-                Regarding mobility, we have used data made available by the Instituto Nacional de Estadística (INE, Spain), that record those mobility flows inside and among municipalities that are observed recurrently, because of habitual commuting to and from the workplace. This data set reports only those flows that involve more than 10 trips, and for municipalities larger than 100 inhabitants. We incorporate the commuting mobility in our model because we deem it fundamental to understand how the infection spreads through the territory. Our model can also be used to simulate certain mobility restrictions (either local or global), and calculate the resulting risk estimates that we would observe under such restrictions. 
+                Regarding mobility, we have used data made available by the Instituto Nacional de Estadística (INE, Spain), that record those mobility flows inside and among municipalities that are observed recurrently, because of habitual commuting to and from the workplace. This data set reports only those flows that involve more than 10 trips, and for municipalities larger than 100 inhabitants. We incorporate the commuting mobility in our model because we deem it fundamental to understand how the infection spreads through the territory. Our model can also be used to simulate certain mobility restrictions (either local or global), and calculate the resulting risk estimates that we would observe under such restrictions.
             </p>
 
             <p>
@@ -208,7 +208,7 @@
             </p>
 
             <p>
-                In the present moment, however, a great number of detected infection cases in Spain are already “native”, meaning that they have been originated inside the country, by local transmission. These kind of cases are well detected by our model, which, starting out from the initial conditions of the first phase of the epidemics (where the vast majority of the cases were imported), is able to make the system evolve and produce the infection risk estimate. For this reason we are in the position of offering new results through our risk map. 
+                In the present moment, however, a great number of detected infection cases in Spain are already “native”, meaning that they have been originated inside the country, by local transmission. These kind of cases are well detected by our model, which, starting out from the initial conditions of the first phase of the epidemics (where the vast majority of the cases were imported), is able to make the system evolve and produce the infection risk estimate. For this reason we are in the position of offering new results through our risk map.
             </p>
 
             <!------ FAQs ------------------------------------------------------------------>
@@ -216,7 +216,7 @@
             <br><br>
             <div class="barritaWide" id="FAQsection"></div>
             <br>
-            <h2>Frequently Asked Questions</h2>  
+            <h2>Frequently Asked Questions</h2>
 
 
             <button class="accordion">
@@ -242,7 +242,7 @@
             </button>
             <div class="panel">
                 <p>
-                    Our model is a new version of a family of models already established in the scientific literature, called compartmental epidemiological models. In this particular model, which has been especially designed for the spreading of COVID-19, we assume that an individual might be in a susceptible state, in the exposed state (infected but not yet infectious), in an infectious asymptomatic state, in an infectious and symptomatic state, or in a recovered or removed state. The transitions between the previous compartments are regulated by the specific parameters for this disease. 
+                    Our model is a new version of a family of models already established in the scientific literature, called compartmental epidemiological models. In this particular model, which has been especially designed for the spreading of COVID-19, we assume that an individual might be in a susceptible state, in the exposed state (infected but not yet infectious), in an infectious asymptomatic state, in an infectious and symptomatic state, or in a recovered or removed state. The transitions between the previous compartments are regulated by the specific parameters for this disease.
                 </p>
             </div>
 
@@ -251,7 +251,7 @@
             </button>
             <div class="panel">
                 <p>
-                    The parameters have been obtained from the most recent scientific literature about the epidemiological traits of this new virus causing the disease COVID-19 (now officially termed SARS-CoV-2). The parameters could be modified depending on the results of the ongoing research. 
+                    The parameters have been obtained from the most recent scientific literature about the epidemiological traits of this new virus causing the disease COVID-19 (now officially termed SARS-CoV-2). The parameters could be modified depending on the results of the ongoing research.
                 </p>
             </div>
 
@@ -269,7 +269,7 @@
             </button>
             <div class="panel">
                 <p>
-                    No. That is the process we followed during the first days of infection in Spain, because most of the detected cases were “imported”, and therefore they had to be introduced in the model by hand. At the present moment, the spreading of the epidemic is in another phase, where most of the infection cases are result of local contagion. These local infections are well captured by our model, meaning our model is able to reproduce them. We are now feeding our model with the initial conditions of the first phase of the epidemics (the number of reported cases in that phase), we let the model evolve and we plot the risk estimate prediction for the following days. 
+                    No. That is the process we followed during the first days of infection in Spain, because most of the detected cases were “imported”, and therefore they had to be introduced in the model by hand. At the present moment, the spreading of the epidemic is in another phase, where most of the infection cases are result of local contagion. These local infections are well captured by our model, meaning our model is able to reproduce them. We are now feeding our model with the initial conditions of the first phase of the epidemics (the number of reported cases in that phase), we let the model evolve and we plot the risk estimate prediction for the following days.
                 </p>
             </div>
 
@@ -278,25 +278,25 @@
             </button>
             <div class="panel">
                 <p>
-                    The key is the fact that the epidemic is now in a different phase. At the very beginning, there were very few reported cases and most of them were imported (i.e. exogenous to our model). In such a scenario, the model was very sensitive to the initial conditions (the number and exact location of the identified contagions). For this reason, it was necessary to update the initial conditions as new cases were reported, and the forecast obtained was only valid at a very short term. Now that the epidemic has evolved into a second phase mostly characterized by local contagions, we can evaluate the model for more timesteps and obtain the risk estimate for several days. 
+                    The key is the fact that the epidemic is now in a different phase. At the very beginning, there were very few reported cases and most of them were imported (i.e. exogenous to our model). In such a scenario, the model was very sensitive to the initial conditions (the number and exact location of the identified contagions). For this reason, it was necessary to update the initial conditions as new cases were reported, and the forecast obtained was only valid at a very short term. Now that the epidemic has evolved into a second phase mostly characterized by local contagions, we can evaluate the model for more timesteps and obtain the risk estimate for several days.
                 </p>
             </div>
- 
+
             <button class="accordion">
                 What does recurrent mobility mean?
             </button>
             <div class="panel">
                 <p>
-                    We are using the mobility data from the Instituto Nacional de Estadística, which accounts for the mobility of the population who works in each municipality. This data reports, principally, the home-to-work mobility and viceversa, although they contain other mobility factors not necessarily work-related. 
+                    We are using the mobility data from the Instituto Nacional de Estadística, which accounts for the mobility of the population who works in each municipality. This data reports, principally, the home-to-work mobility and viceversa, although they contain other mobility factors not necessarily work-related.
                 </p>
             </div>
-            
+
             <button class="accordion">
                 Why are there patches that are shaded in grey?
             </button>
             <div class="panel">
                 <p>
-                    This means that there is no available mobility data for that municipality, most likely because its population falls below 100 inhabitants. 
+                    This means that there is no available mobility data for that municipality, most likely because its population falls below 100 inhabitants.
                 </p>
             </div>
 
@@ -305,23 +305,23 @@
             </button>
             <div class="panel">
                 <p>
-                    The mobility data that is at our disposal only reports those flows of daily recurrent mobility that comprise more than 10 individuals. In the case of areas where there is a 0% risk reported even if they are surrounded by areas with positive risk, what happens is that the ingoing and outgoing flows to and from that region are not reported, and to all effects, it behaves like an isolated area. 
+                    The mobility data that is at our disposal only reports those flows of daily recurrent mobility that comprise more than 10 individuals. In the case of areas where there is a 0% risk reported even if they are surrounded by areas with positive risk, what happens is that the ingoing and outgoing flows to and from that region are not reported, and to all effects, it behaves like an isolated area.
                 </p>
             </div>
 
             <script src="../../accordion.js"></script>
 
             <br>
-            
+
 
              <!------------------ AUTORES ---------------------------------->
              <br>
              <!--<hr class="barrita" id="autores">-->
              <br>
              <div class="barritaWide" id="autores"></div><br>
-             <h2>Authors</h2>   
- 
- 
+             <h2>Authors</h2>
+
+
              <div class="autores">
                 <h4>Coordinadores del proyecto</h4>
                 <p>
@@ -341,7 +341,7 @@
                     <p><a target="_blank" href="http://deim.urv.cat/~clara.granell/">Clara Granell</a> (Universidad de Zaragoza, Zaragoza, Spain)
                 </p>
                 <p>
-                    <a target="_blank" href="https://www.linkedin.com/in/jtmatamalas"> Joan T. Matamalas</a> (Harvard Medical School, Boston, USA) 
+                    <a target="_blank" href="https://www.linkedin.com/in/jtmatamalas"> Joan T. Matamalas</a> (Harvard Medical School, Boston, USA)
                 </p>
                 <p>
                     <a target="_blank" href="https://twitter.com/sorianopanos">David Soriano-Paños</a> (Universidad de Zaragoza, Zaragoza, Spain)
@@ -350,9 +350,9 @@
                     <a target="_blank" href="https://twitter.com/stinomat">Benjamin Steinegger</a>  (Universitat Rovira i Virgili, Tarragona, Spain)
                 </p>
             </div>
-            
+
             <br>
-            <h2>Colaborators</h2>   
+            <h2>Colaborators</h2>
 
             <div class="colaborators">
                <h4>Portugal Section</h4>
