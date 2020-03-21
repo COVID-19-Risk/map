@@ -70,7 +70,7 @@ body{
     padding-top: 3.5em;
     margin-top: -0.4em;
     margin-top: 2em;
-    max-width: 1024px;
+    width: 1024px;
     text-align:center;
     /*Abans no li he posat el width i no feia res. Ara que li he posat width, li trec als elements particulars*/
 }
@@ -317,7 +317,7 @@ img{
 
 #map {
     width: 100%;
-    /* min-width: 700px; */
+    min-width: 700px;
     height: 700px;
 }
 
