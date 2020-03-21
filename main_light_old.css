@@ -70,15 +70,9 @@ body{
     padding-top: 3.5em;
     margin-top: -0.4em;
     margin-top: 2em;
-    max-width: 1024px;
+    width: 1024px;
     text-align:center;
     /*Abans no li he posat el width i no feia res. Ara que li he posat width, li trec als elements particulars*/
-}
-
-.textcontainer {    
-    width :auto;
-    padding-left: 2em;
-    padding-right: 2em;
 }
 
 .containerportada{
@@ -168,10 +162,10 @@ nav {
 main {
     /*min-height: 400px;*/
     margin-top:5rem;
-    padding-left: 2em;
-    padding-right: 2em;
    /*  padding-left:240px;
     padding-right:240px; */
+    padding-left: 5em;
+    padding-right: 5em;
 }
 
 .mainportada{
@@ -409,12 +403,10 @@ main .accordion {
 }*/
 
 .message.dark{
-    /* margin-left: 12em;
-    margin-right: 12em; */
+    margin-left: 12em;
+    margin-right: 12em;
     margin-bottom: 4em;
     margin-top: 4em;
-    width: 70%;
-    margin: 0 auto;
     padding: 1.5em;
     font-weight:300;
     text-align:justify;
