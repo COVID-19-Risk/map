@@ -81,7 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var map = L.map('map',
         {
             zoomSnap: 0.2,
-            zoomDelta: 0.4
+            gestureHandling: true,
+            //zoomDelta: 0.4
         });
         map.createPane('labels');
         map.getPane('labels').style.zIndex = 650;
