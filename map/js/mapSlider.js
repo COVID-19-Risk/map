@@ -266,21 +266,9 @@ document.addEventListener('DOMContentLoaded', function() {
         map.attributionControl.addAttribution(atribMap);
 
         // Add extra plugins
-        map.addControl(new L.Control.Fullscreen({position : 'bottomleft'})); // Fullscreen
 
-        // Search box
-        var searchControl = new L.Control.Search({
-            layer: geojson,
-            propertyName: 'NAMEUNIT',
-            marker: false,
-            position : 'bottomleft',
-            moveToLocation: function(latlng, title, map) {
-                //map.fitBounds( latlng.layer.getBounds() );
-                var zoom = map.getBoundsZoom(latlng.layer.getBounds());
-                  map.setView(latlng, zoom); // access the zoom
-            }
-        });
-        map.addControl(searchControl);
+
+        map.addControl(new L.Control.Fullscreen({position : 'topleft'})); // Fullscreen
         
         // Timeline control
         function updateMap({label, value, map}) {
@@ -307,6 +295,21 @@ document.addEventListener('DOMContentLoaded', function() {
             //initializeChange: false,
             changeMap: updateMap
         }).addTo(map);
+
+        // Search box
+        var searchControl = new L.Control.Search({
+            layer: geojson,
+            propertyName: 'NAMEUNIT',
+            marker: false,
+            position : 'topleft',
+            moveToLocation: function(latlng, title, map) {
+                //map.fitBounds( latlng.layer.getBounds() );
+                var zoom = map.getBoundsZoom(latlng.layer.getBounds());
+                  map.setView(latlng, zoom); // access the zoom
+            }
+        });
+
+        map.addControl(searchControl);
 
     };
 
