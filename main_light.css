@@ -455,6 +455,10 @@ main .accordion {
     padding-left: 1.5em;
 }
 
+.colaborators p{
+    padding-left: 1.5em;
+}
+
 .botonetcontainer{
     display:flex;
     justify-content: space-between;
