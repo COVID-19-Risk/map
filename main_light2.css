@@ -1,0 +1,595 @@
+/*  ------------- CSS RESET ---------------*/
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}*/
+/* -------------------------------------------------------------*/
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body{
+    background-color: rgb(247, 247, 247); /*LIGHT*/
+    /*background-color: #0D1226;*/ /*DARK*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+    line-height: 1.6;
+    font-weight: 300;
+    font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #222; /*LIGHT MODE*/
+    /*color: rgb(240, 239, 239); *//*DARK MODE*/
+}
+
+
+.container {
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3.5em;
+    margin-top: -0.4em;
+    margin-top: 2em;
+    max-width: 1024px;
+    text-align:center;
+    /*Abans no li he posat el width i no feia res. Ara que li he posat width, li trec als elements particulars*/
+}
+
+.textcontainer {    
+    width :auto;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.containerportada{
+    background-color: #ffffff;
+    /*padding-top: 3.5em;*/
+    /*margin-top: -0.4em;*/
+   /* margin-top: 2em;*/
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-right: 1em;
+    width: auto;
+    text-align:center;
+    /*Abans no li he posat el width i no feia res. Ara que li he posat width, li trec als elements particulars*/
+}
+/* --------------- HEADER AND COUNTRIES AND LOGO -------------------------*/
+header {
+    /*height: 0px;*/
+    /*text-align: center;*/
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display:flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+header .logo{
+    text-align: left;
+    padding-left: 5em;
+}
+
+header .countries{
+    text-align: right;
+    padding-right: 5em;
+}
+
+/* PROVA LINKS COUNTRY*/
+.countryLink{
+    border-bottom: none;
+    text-decoration: none;
+    text-align: right;
+    margin-left: 1em;
+}
+.countryLink.actiu{
+    border-bottom: 4px solid #F46458;
+    color: #F46458;
+    text-decoration: none;
+}
+.countryLink.actiu:hover{
+    color: inherit;
+}
+
+.countryLink.portada{
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    border-bottom: 6px solid #BEE7C5;
+    align-self: baseline;
+}
+
+.countryLink.portada:hover{
+    color: inherit;
+    background-color: #BEE7C5!important;
+}
+
+/*.countryLink:hover {
+    color: #F46458 !important;
+}*/
+
+
+/* nav BEFORE*/
+nav {
+    background-color: rgb(236, 236, 236); /*LIGHT MODE*/
+    /*background-color:  #0D1226; *//*DARK MODE*/
+    text-align: center;
+    padding-right: 1em;
+    /*margin-top: 10em;*/
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+
+
+main {
+    /*min-height: 400px;*/
+    margin-top:5rem;
+    padding-left: 2em;
+    padding-right: 2em;
+   /*  padding-left:240px;
+    padding-right:240px; */
+}
+
+.mainportada{
+    /*min-height: 400px;*/
+    margin-top:5rem;
+    /*  padding-left:240px;
+    padding-right:240px; */
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+main p{
+    /*padding-left:5em;
+    padding-right:5em;*/
+    text-align:justify;
+    text-justify: inter-word;
+}
+
+/*h1 {
+    font-size: 2em;
+    color:rgb(41, 41, 41);
+    margin-bottom: 1.5em;
+}*/
+
+p {
+    font-size: 1em;
+}
+
+p.stressed{
+    font-weight: 700;
+}
+
+ul {
+    /*font-size: 1em;*/
+    color: inherit;
+    /*color:rgb(41, 41, 41);*/
+    text-align:justify;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    list-style-position: inside;
+    display: block; 
+    list-style-type: disc; 
+    margin-top: 1em; 
+    margin-bottom: 1 em; 
+    margin-left: 0; 
+    margin-right: 0; 
+    padding-left: 40px;
+}
+
+
+ul.stressed{
+    font-weight: 700;
+}
+
+
+/* .plaintext, .nicelink {
+    font-size: 18px;
+    color:white;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+.nicelink{
+    text-decoration-style: wavy;
+} */
+
+a {
+    /*color:rgb(41, 41, 41);*/
+    /*color: rgb(240, 239, 239); *//*DARK MODE*/
+    color: inherit;
+    border-bottom: 3.5px solid #F46458;
+    text-decoration: none;
+    padding-bottom: 1px;
+
+    /* text-decoration-style: wavy; */
+}
+
+a.imatge{
+    border-bottom: none;
+}
+a.imatge:hover{
+    background-color: #FFFFFF!important;
+    border-bottom: none;
+}
+
+a:hover{
+    background-color: #F46458 !important;
+    border-bottom: 4px solid #F46458;
+   /* color: #F46458;*/
+    /*font-weight: 700;*/
+    text-decoration: none;
+}
+
+nav a{
+    /* Especific per una tag <a> dins d'un tipus <nav> */
+    text-decoration: none;
+    font-size:12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    font-weight: 300;
+    border-bottom: none;
+}
+
+nav a#eng{
+    font-weight: 700;
+}
+
+footer{
+    background-color:  rgb(247, 247, 247);
+    height: 40px;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+footer p{
+    /* Especific per una tag <a> dins d'un tipus <nav> */
+    font-size: 12px;
+    font-weight: 100;
+}
+
+br {
+    padding-top: 1000px;
+}
+
+.maps{
+    padding-top: 100px;
+    /* padding-bottom: 100px; */
+}
+
+.video{
+    padding-top: 20px;
+}
+
+
+img{
+    margin-top: 3.5em;
+    margin-bottom: 3em;
+    width: 100%;
+    height: auto;
+  }
+
+  /*ul {
+    list-style-type: square;
+    list-style-position: outside;
+    list-style-image: none;
+   }*/
+
+#map {
+    width: 100%;
+    min-width: 700px;
+    height: 700px;
+}
+
+/* Dotted red border */
+/*hr.barrita {
+    /*border-top: 3px rgba(0, 0, 0, 0.05);*/ /*LIGHT MODE*/
+    /*border-top: 5px; /*DARK MODE*/
+    /*border-color:#0D1226; /*DARK MODE*/
+    /*height: 2px;
+    margin-left: -5em;
+    margin-right: -5em;
+}*/
+
+.barritaWide{
+    background-color:  rgb(247, 247, 247);
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin-left: -5em;
+    margin-right: -5em;
+}
+
+/* CSS for ACCORDION (for the FAQs)*/
+main .accordion {
+    background-color: #eee; /* LIGHT MODE*/
+    color: rgb(34, 34, 34); /* LIGHT MODE*/
+    background-color: #eee; /* LIGHT MODE*/
+    color: rgb(34, 34, 34); /* LIGHT MODE*/
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #cccccc;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #777777;
+    font-weight: bold;
+    float: right;
+    padding-right: 1.3em;
+  }
+
+  .active:after {
+    content: "\2212";
+    padding-right: 1.3em;
+  }
+
+   
+  .panel {
+    padding: 0 1em;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+.wrapper {
+    box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    padding-top:3em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+/* MISSATGES D'AVÍS */
+/*.message {
+    color: black;
+    margin-left: 12em;
+    margin-right: 12em;
+    margin-bottom: 4em;
+    margin-top: 4em;
+    padding: 1.5em;
+    font-weight:300;
+    text-align:justify;
+    border-radius:0.3em;
+}*/
+
+.message.dark{
+    /* margin-left: 12em;
+    margin-right: 12em; */
+    margin-bottom: 4em;
+    margin-top: 4em;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1.5em;
+    font-weight:300;
+    text-align:justify;
+    border-radius:0.3em;
+    border: solid 4px;
+}
+
+.message.red{
+    background-color: rgba(240, 68, 68, 0.40);
+}
+.message.dark.green{
+    /*background-color:#BEE7C5;*/
+    border-color: #BEE7C5;
+}
+
+.message.dark.new{
+    /*background-color: #fe8876;*/
+    border-color: #fe8876;
+}
+
+.message .firma {
+    font-style: italic;
+    text-align: right;
+    padding-top: 1em;
+}
+
+.message .update {
+    font-variant: small-caps;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+.message.dark.green.portada{
+    /*background-color:#BEE7C5;*/
+    border: solid 6px  #BEE7C5;
+    border-radius: 8px;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-left:1em; /*8em*/
+    margin-right: 1em;/*8em*/ 
+}
+
+.autores p{
+    padding-left: 1.5em;
+}
+
+.colaborators p{
+    padding-left: 1.5em;
+}
+
+.botonetcontainer{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.messagecontainer{
+    display:flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+/* BUTTONS */
+.botonetCOVID {
+	background-color:#BEE7C5; 
+	border: none;
+	color: white;
+	padding: 0.75rem 1rem;
+	text-align: center;
+	text-decoration: none;
+	margin: 40px 10px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 4px;
+    color: black; 
+    display: inline-block;
+    position: center;
+    font-size: 1.5em;
+}
+
+.botonetCOVIDdyn {
+	background-color: white; 
+	color:black; 
+	border: 4px solid #BEE7C5;
+}
+  
+.botonetCOVIDdyn:hover {
+	background-color: #BEE7C5;
+	color:black !important; 
+}
+
+img.portada{
+    max-width: 60%;
+    height:auto;
+}
+
+img.portadabrazil{
+    max-width: 42%;
+    height: auto;
+}
+
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 300; 
+    text-align: left;
+}
+  h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem; 
+       text-align: center; font-weight: 400;}
+  h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+  h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+  h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; 
+       margin-bottom: 2rem; margin-top: 3rem;}
+  h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+  h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+  h3.portada{
+      font-weight: 500;
+      text-align: center;
+      margin-top: 0.3rem;
+      font-size: 2.5rem;
+  }
+  h1.portada{
+      margin-bottom:0.3rem;
+  }
+
+/*.countriesContainer{
+    margin-left: 5em;
+    margin-right: 5em;
+    text-align: right;
+    padding-right: 1em;
+    padding-top: 0em;
+    padding-bottom: 5em;
+   
+}
+.countriesContainer a{
+    color: #E91C2C;
+    margin-left: 0.5em;
+}
+
+.countriesContainer a img{
+    width: 3%;
+    display: inline-block;
+}
+
+.countriesContainer p{
+    color: #E91C2C;
+}
+
+.botonetCOVID {
+	background-color:#f44336; 
+	border: none;
+	color: white;
+	padding: 0.75rem 1rem;
+	text-align: center;
+	text-decoration: none;
+	margin: 40px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 4px;
+    color: black; 
+}
+
+.botonetCOVIDdyn {
+	background-color: white; 
+	color:black; 
+	border: 2px solid #f44336;
+}
+  
+.botonetCOVIDdyn:hover {
+	background-color: #f44336;
+	color:black !important; 
+}
+*/
