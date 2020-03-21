@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mapa de risco COVID-19 - Brasil</title>
     <meta name="description" content="Mapa de risco de propagação do COVID-19 no Brasil.">
-    <link rel="stylesheet" href="../../main_light.css">
+    <link rel="stylesheet" href="../../main_light.css?v=2">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Raleway:300,400,500&display=swap" rel="stylesheet">
 
     <meta property="og:url"                content="https://covid-19-risk.github.io/map/brazil/pt/" />
@@ -34,7 +34,7 @@
     <header>
 
         <div class="logo">
-            #COVID-19RISK
+            #CoVID-19RISK
         </div>
         <div class="countries">
             <a href="../../spain/es/" class="countryLink">SPAIN</a>
@@ -55,6 +55,7 @@
 
 
         <main>
+            <div class="textcontainer">
             <h1>Mapa de risco de propagação do COVID-19 <br> por contágio comunitário no Brasil</h1>
 
 <!--            <div class="messagem verde">-->
@@ -74,21 +75,21 @@
             <br>
             <h2>Motivação</h2>
             <p>
-                A expansão do COVID-19 coloca muitos desafios ao nosso sistema social e de saúde. Um deles é ser capaz de prever e quantificar o surgimento de novos casos derivados de infecções comunitárias em todo o país. Entende-se por contágio comunitário aquelas pessoas afetadas pelo vírus para quem a fonte da infecção é desconhecida, ou seja, sem histórico de viagens recentes às áreas afetadas ou vínculos diretos com outras pessoas infectadas.
+                A expansão do COVID-19 coloca muitos desafios ao nosso sistema social e de saúde. Um deles é ser capaz de prever e quantificar o aparecimento de novos casos devido a infecções comunitárias em todo o país. Entende-se por contágio comunitário aquelas pessoas infectadas pelo vírus por uma fonte de infecção desconhecida, ou seja, sem histórico de viagens recentes às áreas afetadas ou vínculos diretos com outras pessoas infectadas.
             </p>
-
+ 
             <p>
                 Uma das principais dificuldades que estamos a enfrentar é a deteção precoce de casos, medida essencial para o seu confinamento e tratamento médico. O COVID-19 é caracterizado por um estado infetado bastante longo e assintomático ou com sintomas leves ou moderados, que pode durar até 14 dias, de acordo com os dados disponíveis. O resultado de não ter uma deteção precoce influencia significativamente a propagação da epidemia e, como resultado, dificulta bastante a implementação de medidas efetivas de controle.
             </p>
-
+ 
             <p>
-                Nesta página, disponibilizamos o mapa do risco estimado de epidemia no Brasil, ao nível de município, derivado de um modelo para a disseminação de epidemias com base na mobilidade pendular (recorrente) entre municípios da população ativa no Brasil. Esses dados foram compilados a partir do <a href="https://censo2010.ibge.gov.br/">Censo Demográfico do Brasil de 2010</a> realizado pelo <a href="https://ibge.gov.br/">Instituto Brasileiro de Geografia e Estatística (IBGE)</a>.
+                Nesta página, disponibilizamos o mapa do risco estimado de epidemia no Brasil, ao nível de município, baseado em um modelo para a disseminação de epidemias com dados de mobilidade pendular (recorrente) entre municípios da população ativa no Brasil. Esses dados foram compilados a partir do <a href="https://censo2010.ibge.gov.br/">Censo Demográfico do Brasil de 2010</a> realizado pelo <a href="https://ibge.gov.br/">Instituto Brasileiro de Geografia e Estatística (IBGE)</a>.
             </p>
-
+ 
             <p>
-               O nosso modelo incorpora os dados epidemiológicos relatados até o momento nos meios de comunicação e secretarias de municípios (aguardamos dados atualizados por município pelo Ministério da Saúde), para o vírus responsável pelo COVID-19, que foi oficialmente chamado SARS-CoV-2, e dados demográficos e de mobilidade entre os municípios da Brasil. O modelo pode ser perfeitamente utilizado em outros locais para os quais esses dados estão disponíveis.
+               O nosso modelo incorpora os dados epidemiológicos relatados até o momento nos meios de comunicação e secretarias de municípios (aguardamos dados atualizados por município pelo Ministério da Saúde), para o vírus responsável pela COVID-19, que foi oficialmente denominado SARS-CoV-2, e dados demográficos e de mobilidade entre os municípios do Brasil. O modelo pode ser perfeitamente utilizado em outros locais para os quais esses dados estão disponíveis.
             </p>
-
+ 
             <!------------------ RESULTADOS ---------------------------------->
 
             <br><br>
@@ -104,10 +105,11 @@
             </p>
 
             <!-- <p class="stressed">Devido ao alto volume de visitas, o mapa pode demorar alguns segundos para carregar.</p> -->
+            </div>
 
             <iframe src="../../map/?lang=pt&country=br" id="map" frameborder="0" allowfullscreen></iframe>
 
-
+            <div class="textcontainer">
             <!-- <p class="stressed">
                 Os dados numéricos de risco para o mapa podem ser baixados <a href="update.link" target="_blank"> neste link no formato Excel </a> e <a href = "update.link "target =" _ blank "> aqui em formato pdf.</a>
             </p><br> -->
@@ -132,19 +134,19 @@
 				Para a dinâmica de transmissão do vírus, usamos um modelo compartimental, o que significa que a população é dividida em compartimentos de acordo com seu estado epidemiológico:
                 <ul>
                     <li>Suscetível: indivíduo que não contraiu a doença, mas pode contraí-la.</li>
-                    <li>Exposto: indivíduo que está infectado, mas está na fase de incubação e, portanto, ainda não é infeccioso.</li>
-                    <li>Assintomático (ou com sintomas leves): indivíduo que já está infectado e infeccioso, mas não apresenta sintomas relevantes que sejam facilmente identificáveis.</li>
-                    <li>Infectado: indivíduo é infeccioso e mostra sintomas facilmente atribuíveis a uma infecção por COVID-19, facilitando a detecção.</li>
+                    <li>Exposto (latente): indivíduo que está infectado, mas ainda não é infeccioso nem apresenta sintomas. Está no início da fase de incubação.</li>
+                    <li>Assintomático (ou com sintomas leves): indivíduo que já está infectado e infeccioso, mas não apresenta sintomas relevantes facilmente identificáveis.</li>
+                    <li>Infectado: indivíduo que tem sintomas e é capaz de transmitir o agente etiológico da doença a outros indivíduos.</li>
                     <!-- <li>Hospitalizado: indivíduo que está infectado, mas foi detectado e requer hospitalização. Esse indivíduo não espalha mais a doença porque deveria estar confinado ao hospital.</li> -->
-                    <li>Recuperado: Um indivíduo que não é mais infeccioso e não pode contrair o mesmo vírus novamente, porque ele se recuperou da infecção e desenvolveu imunidade ou porque faleceu.</li>
+                    <li>Recuperado: indivíduo que não tem mais sintomas e não é mais infeccioso. Assume-se que não pode voltar a contrair o vírus, porque se recuperou da infecção e desenvolveu imunidade ou porque faleceu.</li>
                 </ul>
             </p>
-            <p>
-				As transições entre compartimentos são reguladas pelas taxas de transmissão, recuperação etc., que derivamos dos estudos sobre o COVID-19 publicados até o momento.
+            <p> 
+				As transições entre compartimentos são reguladas pelas taxas de transmissão, recuperação etc., que derivamos dos estudos sobre o COVID-19 publicados até o momento.       
             </p>
 
             <p>
-               Para a mobilidade, utilizamos dados, devidamente anonimizados, compilados a partir do Censo Demográfico de 2010 do <a href="https://ibge.gov.br/">IBGE</a>, que informam sobre as viagens diárias por trabalho entre municípios e dentro dos municípios. Esse conjunto de dados relata o fluxo de pessoas entre municípios para todos os municípios do Brasil. Incorporamos a mobilidade ao modelo porque consideramos essencial para entender como uma infeção se espalha pelo território. O modelo permite simular diferentes cenários de restrições (locais ou globais) na mobilidade, e calcular os riscos resultantes que observaríamos no caso de impor tais restrições.
+               Para a mobilidade, utilizamos dados, devidamente anonimizados, compilados a partir do Censo Demográfico de 2010 do <a href="https://ibge.gov.br/">IBGE</a>, que informam sobre as viagens diárias por trabalho entre municípios e dentro dos municípios. Esse conjunto de dados quantifica o fluxo de pessoas entre municípios para todos os municípios do Brasil. Incorporamos a mobilidade ao modelo porque consideramos essencial para entender como uma infeção se espalha pelo território. O modelo permite simular diferentes cenários de restrições (locais ou globais) na mobilidade, e calcular os riscos resultantes depois da imposição de tais restrições.
             </p>
 
 <!--            <p>-->
@@ -160,28 +162,29 @@
             <p>
                 <ul>
                     <li>O modelo não prevê a importação de casos internacionais.</li>
-                    <li>O modelo assume os parâmetros epidemiológicos relatados até o momento, mas que podem variar dependendo dos estudos epidemiológicos.</li>
-                    <li>O modelo assume que os dados de mobilidade não variam, ou seja, a estimativa mudaria substancialmente se a mobilidade fosse restrita.</li>
+                    <li>O modelo assume os parâmetros epidemiológicos conhecidos até o momento, mas que podem variar dependendo dos estudos epidemiológicos.</li>
+                    <li>O modelo assume que os dados de mobilidade não variam, ou seja, a estimativa mudaria substancialmente se a mobilidade fosse restringida.</li>
                 </ul>
             </p>
 
             <h4>Vantagens</h4>
             <p>
                 <ul>
-                    <li>O modelo permite que os parâmetros epidemiológicos sejam alterados conforme relatado em futuros estudos epidemiológicos.</li>
-                    <li>O modelo permite estudar a influência do período assintomático e sua infecciosidade associada.</li>
+                    <li>O modelo permite que os parâmetros epidemiológicos sejam alterados conforme reportado em futuros estudos epidemiológicos.</li>
+                    <li>O modelo permite estudar a influência do período assintomático. Neste, o infetado transmite a infecção mesmo sem ter
+                        sintomas, esta capacidade de contágio pode diferir daquela que tem os infectados com sintomas.</li>
                     <li>Com base nesses parâmetros, podemos estimar o mapa de risco de novos casos, antecipando a disseminação do vírus por indivíduos assintomáticos.</li>
-                    <li>As restrições de mobilidade em massa (quarentena) podem ser facilmente introduzidas no modelo, permitindo obter novos valores de risco após essas medidas, testando diferentes cenários.</li>
+                    <li>As restrições de mobilidade em massa (quarentena) podem ser facilmente introduzidas no modelo, permitindo obter novos valores de risco depois da implementação dessas medidas, testando diferentes cenários.</li>
                 </ul>
             </p>
 
             <h4 id="losdatos" >O problema dos dados </h4>
             <p>
-                 A partir das condições iniciais (localização de alguns casos já detectados), o modelo usado estima como a epidemia evolui no Brasil. Na primeira fase da propagação do vírus no Brasil, a maioria dos casos são "importados", isto é, correspondentes a indivíduos que viajaram para outros países, onde contraíram o vírus e de onde voltaram infectados. Estes casos não são previstos pelo modelo por serem externos à dinâmica de propagação modelada. Por isso, numa fase em que os casos importados representam a maioria dos casos detectados no país, é fundamental ter uma base de dados de qualidade (com resolução temporal e espacial a nível de município) para calcular as estimativas de risco com precisão.
+                 A partir das condições iniciais (localização de alguns casos já detectados), o modelo usado estima como a epidemia evolui no Brasil. Na primeira fase da propagação do vírus no Brasil, a maioria dos casos são "importados", isto é, correspondentes a indivíduos que viajaram para outros países, onde contraíram o vírus e de onde voltaram infectados. Estes casos não são previstos pelo modelo por serem externos à dinâmica de propagação modelada. Por isso, numa fase em que os casos importados representam a maioria dos casos detectados no país, é fundamental ter uma base de dados de qualidade (com resolução temporal e espacial a nível de município) para calcular as estimativas de risco com precisão. 
             </p>
 
             <!-- <p>
-                No momento, o número de casos encontrados que correspondem a infeções em território nacional já corresponde à grande maioria dos casos. Estes casos são previstos pelo modelo.
+                No momento, o número de casos encontrados que correspondem a infeções em território nacional já corresponde à grande maioria dos casos. Estes casos são previstos pelo modelo.  
             </p> -->
 
             <!------ FAQs ------------------------------------------------------------------>
@@ -189,7 +192,7 @@
             <br><br>
             <div class="barritaWide" id="FAQsection"></div>
             <br>
-            <h2>Perguntas frequentes</h2>
+            <h2>Perguntas frequentes</h2>   
 
             <button class="accordion">
                 O que é representado neste mapa?
@@ -214,7 +217,7 @@
             </button>
             <div class="panel">
                 <p>
-                    O modelo é uma nova versão de uma família de modelos já estabelecida, denominada modelos de compartimentos epidemiológicos. No nosso modelo, projetado especialmente para o COVID-19, supomos que um indivíduo possa estar saudável, no período de incubação, infectado, mas assintomático, infectado e apresentando sintomas, recuperado ou falecido. As transições entre esses compartimentos são reguladas pelos parâmetros específicos da doença.
+                    O modelo é uma nova versão de uma família de modelos epidemiológicos bem estabelecida na literatura, denominada modelos de compartimentos epidemiológicos. No nosso modelo, projetado especialmente para a COVID-19, supomos que um indivíduo possa estar saudável, exposto (infectado mas não infeccioso e sem sintomas), infeccioso mas assintomático, infeccioso e com sintomas, recuperado ou falecido. As transições entre esses compartimentos são reguladas pelos parâmetros específicos da doença.
                 </p>
             </div>
 
@@ -229,7 +232,7 @@
 
 
             <button class="accordion">
-                Quais dados de mobilidade usados no modelo?
+                Que dados de mobilidade usados no modelo?
             </button>
             <div class="panel">
                 <p>
@@ -248,11 +251,11 @@
 
 
             <button class="accordion">
-                Vocês atualizam os dados do modelo toda vez que novos casos são detectados?
+                Vocês atualizam os dados do modelo sempre que novos casos são detectados?
             </button>
             <div class="panel">
                 <p>
-                    Nem sempre. Esse processo é feito durante os primeiros dias de infecção no Brasil, pois a maioria dos casos é "importada" e, portanto, precisam ser inseridos manualmente. Quando a epidemia é generalizada o suficiente para que a maioria das infecções seja local, esse resultado é capturado pelo modelo. Partimos das condições iniciais, que são os casos relatados na primeira fase da epidemia, deixamos o modelo evoluir e obtemos a previsão de risco para os dias seguintes.
+                    Não. Esse procedimento é feito durante os primeiros dias de infecção no Brasil, quando a maioria dos casos era "importada" e, portanto, precisavam ser inseridos explicitamente para iniciar o processo. Quando a epidemia está suficientemente generalizada para que se possa considerar que a maioria das infeções é local (infecção comunitária), esse fenômeno é capturado pelo modelo. Partimos das condições iniciais, que são os casos relatados na primeira fase da epidemia, deixamos o modelo evoluir e obtemos a previsão de risco para os dias seguintes.
                 </p>
             </div>
 
@@ -295,14 +298,14 @@
             <script src="../../accordion.js"></script>
 
             <br>
-
+            
 
             <!------------------ AUTORES ---------------------------------->
             <br>
             <!--<hr class="barrita" id="autores">-->
             <br>
             <div class="barritaWide" id="autores"></div><br>
-            <h2>Autores</h2>
+            <h2>Autores</h2>   
 
             <div class="autores">
                 <h4>Coordenadores do projeto</h4>
@@ -323,7 +326,7 @@
                     <p><a target="_blank" href="http://deim.urv.cat/~clara.granell/">Clara Granell</a> (Universidad de Zaragoza, Zaragoza, Spain)
                 </p>
                 <p>
-                    <a target="_blank" href="https://www.linkedin.com/in/jtmatamalas"> Joan T. Matamalas</a> (Harvard Medical School, Boston, USA)
+                    <a target="_blank" href="https://www.linkedin.com/in/jtmatamalas"> Joan T. Matamalas</a> (Harvard Medical School, Boston, USA) 
                 </p>
                 <p>
                     <a target="_blank" href="https://twitter.com/sorianopanos">David Soriano-Paños</a> (Universidad de Zaragoza, Zaragoza, Spain)
@@ -333,7 +336,7 @@
                 </p>
             </div>
             <br>
-            <h2>Colaboradores</h2>
+            <h2>Colaboradores</h2>   
 
             <div class="colaborators">
                <h4>Seção Portugal</h4>
@@ -358,9 +361,10 @@
 
             <br>
             <br>
+            </div>
         </main>
 
-
+       
 
        <footer>
             <p> </p>
