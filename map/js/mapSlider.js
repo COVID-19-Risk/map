@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function() {
             topBgPadding: '12px',
             leftBgPadding: '22px',
             bottomBgPadding : '10px',
-            defaultSelection: 2, //timelineItems.length,
+            defaultSelection: timelineItems.length,
             position: 'topleft',
             //initializeChange: false,
             changeMap: updateMap
