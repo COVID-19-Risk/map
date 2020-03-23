@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
             layer.on({
                 mouseover: highlightFeature,
                 mouseout: resetHighlight,
-                click: zoomToFeature
+                //click: zoomToFeature
             });
         }
 
