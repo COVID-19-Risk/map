@@ -91,9 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
         map.fitBounds([gps1, gps2]);
 
         var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-            attribution: 'Map data &copy; <a target="_parent" href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+            attribution: 'Map &copy; <a target="_parent" href="https://www.openstreetmap.org/">OpenStreetMap</a>, ' +
                 '<a target="_parent" href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-                'Adapted by <a target="_parent" href="http://wesleycota.com/" ref="author">Wesley Cota</a>',
+                'Adapted by <a target="_parent" href="http://wesleycota.com/" ref="author">Wesley Cota (UFV-BR)</a>',
         }).addTo(map);
         var positronLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a target="_parent" href="https://carto.com/">CartoDB</a>',
