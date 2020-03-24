@@ -245,9 +245,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 labels = [],
                 from, to;
             for (var i = 0; i < grades.length ; i++) {
-                from = grades[i];
+                fromt = grades[i];
+                from = parseFloat(grades[i].toString().replace(/[^\d.-]/g, ''));
                 labels.push(
-                    '<i style="background:' + getColor((from+from*1e-7)/100.0) + '"></i> ' +from+'%');
+                    '<i style="background:' + getColor((from+from*1e-7)/100.0) + '"></i> ' +fromt+'%');
             }
             labels.push(
                 '<i style="background: '+ colorSinDatos +'"></i> '+lang.NoData);
