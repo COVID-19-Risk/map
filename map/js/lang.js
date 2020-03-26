@@ -17,8 +17,8 @@ var changeLang = function(lang) {
             break;
         case 'pt':
             return {
-                PageTitle : 'Mapa interativo do risco do SARS-CoV-2: ',
-                RiskHeader : 'Risco SARS-CoV-2',
+                PageTitle : 'Mapa interativo da previsão de propagação do SARS-CoV-2: ',
+                RiskHeader : 'Previsão SARS-CoV-2',
                 HoverMapText : 'Passe o cursor sobre uma cidade',
                 NoData : 'Sem dados',
                 DateLabel : 'Previsões',
