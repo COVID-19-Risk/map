@@ -12,15 +12,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mapa de risco COVID-19 - Portugal</title>
-    <meta name="description" content="Mapa de risco de propagação do COVID-19 - Portugal.">
+    <title>Mapa de previsão da propagação da COVID-19 - Portugal</title>
+    <meta name="description" content="Mapa de previsão da propagação da COVID-19 - Portugal.">
     <link rel="stylesheet" href="../../main_light.css?v=2">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Raleway:300,400,500&display=swap" rel="stylesheet">
 
     <meta property="og:url"                content="https://covid-19-risk.github.io/map/portugal/pt/" />
     <meta property="og:type"               content="website" />
-    <meta property="og:title"              content="Mapa de risco COVID-19 - Portugal" />
-    <meta property="og:description"        content="Mapa de risco de propagação do COVID-19 em Portugal." />
+    <meta property="og:title"              content="Mapa de previsão da COVID-19 - Portugal" />
+    <meta property="og:description"        content="Mapa de previsão da propagação da COVID-19 em Portugal." />
     <meta property="og:image"              content="https://covid-19-risk.github.io/map/imgs/corona.jpg" />
 
     <!-- Favicons -->
@@ -48,7 +48,7 @@
         <nav>
             <a href="#modelo">MODELO</a>
             <a href="#resultados">RESULTADOS</a>
-            <a href="#FAQsection">PREGUNTAS FREQUENTES</a>
+            <a href="#FAQsection">PERGUNTAS FREQUENTES</a>
             <a href="#autores">AUTORES</a>
             <a id="eng" href="../en/">IN ENGLISH</a>
         </nav>
@@ -56,7 +56,7 @@
 
         <main>
             <div class="textcontainer">
-                <h1>Mapa de risco de propagação do COVID-19 <br> por contágio comunitário em Portugal</h1>
+                <h1>Mapa de previsão da propagação do COVID-19 <br> por contágio comunitário em Portugal</h1>
 
     <!--            <div class="messagem verde">-->
     <!--              A causa de la falta de datos de fuentes oficiales que informen de manera fiable y actualizada de los nuevos casos detetados y su localización, lamentamos comunicar que debemos interrumpir las actualizaciones de este mapa con fecha de última actualización: 3 de Marzo 2020. <br><br>-->
@@ -83,11 +83,10 @@
                 </p>
     
                 <p>
-                    Nesta página, disponibilizamos o mapa do risco estimado de epidemia em Portugal, ao nível do concelho, baseado em um modelo para a disseminação de epidemias com dados da mobilidade habitual (recorrente) entre concelhos da população ativa em Portugal, de acordo com a informação fornecida pela empresa de telecomunicações <a target="_blank"href="https://www.nos.pt/">NOS</a>, correspondentes a médias diárias em janeiro de 2020.</p>
+                    Nesta página, disponibilizamos o mapa da propagação estimada da epidemia em Portugal, ao nível do concelho, baseado em um modelo para a disseminação de epidemias com dados da mobilidade habitual (recorrente) entre concelhos da população ativa em Portugal, de acordo com a informação fornecida pela empresa de telecomunicações <a target="_blank"href="https://www.nos.pt/">NOS</a>, correspondentes a médias diárias em janeiro de 2020.</p>
     
                 <p>
-                O nosso modelo incorpora os dados epidemiológicos relatados até à data nos meios de comunicação (aguardamos dados atualizados fornecidos pela Direção Geral de Saúde), para o vírus
-    responsável pela COVID-19, que foi oficialmente chamado SARS-CoV-2, e dados demográficos e de mobilidade entre os concelhos de Portugal. O modelo pode ser utilizado em outros locais onde esses dados estão disponíveis.
+                O nosso modelo incorpora os dados epidemiológicos relatados até à data pela Direção Geral de Saúde, para o vírus responsável pela COVID-19, que foi oficialmente chamado SARS-CoV-2, e dados demográficos e de mobilidade entre os concelhos de Portugal. O modelo pode ser utilizado em outros locais onde esses dados estão disponíveis.
                 </p>
     
                 <!------------------ RESULTADOS ---------------------------------->
@@ -99,9 +98,9 @@
                 <br>
                 <h2>Resultados</h2>
 
-                <h3>Mapa de risco</h3>
+                <h3>Mapa de previsão</h3>
                 <p>
-                    O mapa de risco gerado com o modelo produz um indicador para cada concelho da fração da população que se estima ter contraído a infeção por SARS-COV-2 através do contágio comunitário. Os concelhos sombreados em cinza correspondem a concelhos para os quais não há dados disponíveis.
+                    O mapa de previsão gerado com o modelo produz um indicador para cada concelho da fração da população que se estima ter contraído a infeção por SARS-COV-2 através do contágio comunitário. Os concelhos sombreados em cinza correspondem a concelhos para os quais não há dados disponíveis.
                 </p>
 
                 <!-- <p class="stressed">Devido ao alto volume de visitas, o mapa pode demorar alguns segundos para carregar.</p> -->
@@ -111,7 +110,7 @@
 
             <div class="textcontainer">
                 <p class="stressed">
-                    Os dados numéricos de risco para o mapa podem ser baixados <a href="../resources/tabelaRiscoCOVID19-Portugal-20-ate-24Mar.ods">como planilha</a> e <a href = "../resources/tabelaRiscoCOVID19-Portugal-20-ate-24Mar.pdf">em formato PDF.</a>
+                    Os dados numéricos de previsão para o mapa podem ser baixados <a href="../resources/tabelaPrevisaoCOVID19-Portugal-25-ate-27Mar.ods">como planilha</a> e <a href = "../resources/tabelaRiscoCOVID19-Portugal-25-ate-27Mar.pdf">em formato PDF.</a>
                 </p><br>
 
                 <!------------------ MODELO ---------------------------------->
@@ -129,7 +128,7 @@
                 O modelo utilizado é uma versão generalizada de uma família de modelos epidemiológicos de tempo discreto, que foi especialmente modificada para representar a dinâmica de transmissão do SARS-COV-2, o vírus que causa a doença COVID-19.
                 </p>
                 <p>
-                    O modelo visa estimar a taxa de risco de cada concelho de Portugal, levando em consideração: (I) a dinâmica de transmissão do SARS-COV-2, (II) os padrões de mobilidade recorrente em Portugal e (III) a demografia da população portuguesa.
+                    O modelo leva em consideração: (I) a dinâmica de transmissão do SARS-COV-2, (II) os padrões de mobilidade recorrente em Portugal e (III) a demografia da população portuguesa.
                 </p>
 
                 <p>
@@ -150,7 +149,7 @@
 
                 <p>
                 Para a mobilidade, utilizamos dados, devidamente anonimizados, fornecidos pela <a target="_blank" href="https://www.nos.pt/">NOS</a>, que correspondem às viagens feitas numa lógica diária entre concelhos e dentro dos concelhos. Este
-    conjunto de dados quantifica o fluxo médio entre todos concelhos de Portugal no mês de janeiro de 2020. Incorporamos a mobilidade ao modelo porque consideramos essencial entender como uma infeção se dissemina pelo território. O modelo permite simular diferentes cenários de restrições (locais ou globais) na mobilidade, e calcular os riscos resultantes depois da imposição de tais restrições.
+    conjunto de dados quantifica o fluxo médio entre todos concelhos de Portugal no mês de janeiro de 2020. Incorporamos a mobilidade ao modelo porque consideramos essencial entender como uma infeção se dissemina pelo território. O modelo permite simular diferentes cenários de restrições (locais ou globais) na mobilidade, e calcular as previsões depois da imposição de tais restrições.
                 </p>
 
     <!--            <p>-->
@@ -176,14 +175,14 @@
                     <ul>
                         <li>O modelo permite que os parâmetros epidemiológicos sejam alterados conforme reportado em futuros estudos epidemiológicos.</li>
                         <li>O modelo permite estudar a influência do período assintomático. Neste, o infetado transmite a infeção mesmo sem ter sintomas, e esta capacidade de contágio pode diferir daquela que têm os infetados com sintomas.</li>
-                        <li>Com base nesses parâmetros, podemos estimar o mapa de risco de novos casos, antecipando a disseminação do vírus por indivíduos assintomáticos.</li>
-                        <li>As restrições de mobilidade de massa (quarentena) podem ser facilmente introduzidas no modelo, permitindo a obtenção de novos valores de risco depois da implementação dessas medidas, testando diferentes cenários.</li>
+                        <li>Com base nesses parâmetros, podemos estimar o mapa de novos casos, antecipando a disseminação do vírus por indivíduos assintomáticos.</li>
+                        <li>As restrições de mobilidade de massa (quarentena) podem ser facilmente introduzidas no modelo, permitindo a obtenção de novos valores depois da implementação dessas medidas, testando diferentes cenários.</li>
                     </ul>
                 </p>
 
                 <h4 id="losdatos" >O problema dos dados </h4>
                 <p>
-                    A partir das condições iniciais (localização de alguns casos já detetados), o modelo usado estima como é que a epidemia evolui em Portugal. Na primeira fase da propagação do vírus em Portugal, a maioria dos casos são "importados", isto é, correspondentes a indivíduos que viajaram para outros países, onde contraíram o vírus e de onde voltaram infetados. Estes casos não são previstos pelo modelo por serem externos à dinâmica de propagação simulada. Por isso, numa fase em que os casos importados são a maioria dos casos detetados no país, é fundamental ter uma base de dados de qualidade para calcular as estimativas de risco com precisão. 
+                    A partir das condições iniciais (localização de alguns casos já detetados), o modelo usado estima como é que a epidemia evolui em Portugal. Na primeira fase da propagação do vírus em Portugal, a maioria dos casos são "importados", isto é, correspondentes a indivíduos que viajaram para outros países, onde contraíram o vírus e de onde voltaram infetados. Estes casos não são previstos pelo modelo por serem externos à dinâmica de propagação simulada. Por isso, numa fase em que os casos importados são a maioria dos casos detetados no país, é fundamental ter uma base de dados de qualidade para calcular as estimativas com precisão. 
                 </p>
 
                 <!-- <p>
@@ -244,11 +243,11 @@
                 </div>
 
                 <button class="accordion">
-                        Se alguém reside ou trabalha numa área com risco de 0,1%, isso significa que esse indivíduo tem 1 em <br> 1000 chances de contrair a doença?
+                        Se alguém reside ou trabalha numa área com valor de 0,1%, isso significa que esse indivíduo tem 1 em <br> 1000 chances de contrair a doença?
                 </button>
                 <div class="panel">
                     <p>
-                            Não. Um indicador de risco de 0,1% em um concelho indica que se estima que 1 em cada 1.000 indivíduos na população desse município possa estar infetado (assintomático ou sintomático). A probabilidade de contrair a doença depende de mais fatores, como o número de contatos que são feitos, os locais para os quais você viaja, as horas de mobilidade etc. De qualquer forma, o risco de infeção em cada município pode ser interpretado como o "estado potencial de saúde desse município em relação ao COVID-19".                </p>
+                            Não. Um indicador de 0,1% em um concelho indica que se estima que 1 em cada 1.000 indivíduos na população desse município possa estar infetado (assintomático ou sintomático). A probabilidade de contrair a doença depende de mais fatores, como o número de contatos que são feitos, os locais para os quais você viaja, as horas de mobilidade etc. De qualquer forma, a previsão de infeção em cada município pode ser interpretado como o "estado potencial de saúde desse município em relação ao COVID-19".                </p>
                 </div>
 
 
@@ -257,7 +256,7 @@
                 </button>
                 <div class="panel">
                     <p>
-                        Não. Esse procedimento é feito durante os primeiros dias de infeção em Portugal, quando a maioria dos casos era "importada" e, portanto, precisavam ser inseridos explicitamente para iniciar o processo. Quando a epidemia está suficientemente generalizada para que se possa considerar que a maioria das infeções é local (infeção comunitária), esse fenômeno é capturado pelo modelo. Partimos das condições iniciais, que são os casos relatados na primeira fase da epidemia, deixamos o modelo evoluir e obtemos a previsão de risco para os dias seguintes.             
+                        Não. Esse procedimento é feito durante os primeiros dias de infeção em Portugal, quando a maioria dos casos era "importada" e, portanto, precisavam ser inseridos explicitamente para iniciar o processo. Quando a epidemia está suficientemente generalizada para que se possa considerar que a maioria das infeções é local (infeção comunitária), esse fenômeno é capturado pelo modelo. Partimos das condições iniciais, que são os casos relatados na primeira fase da epidemia, deixamos o modelo evoluir e obtemos a previsão para os dias seguintes.             
                         </p>
                 </div>
 
